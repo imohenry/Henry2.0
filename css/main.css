@@ -1213,7 +1213,7 @@ header .logo a {
   color: transparent;
   width: 92px;
   height: 15px;
-  background: url("../images/HENRY..png") no-repeat center;
+  background: url("../images/HENRY..jpg") no-repeat center;
   background-size: 92px 15px;
 }
 
@@ -1417,7 +1417,7 @@ header .logo a {
 }
 
 #intro {
-  background: #151515 url(../images/henry-img.png) no-repeat center bottom;
+  background: #151515 url(../images/henry-img.jpg) no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
