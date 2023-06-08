@@ -2917,6 +2917,10 @@ footer .copyright span:last-child::after {
   display: none;
 }
 
+.contact-items{
+ color: #6e6e6e;
+}
+
 /**
  * responsive:
  * footer
