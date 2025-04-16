@@ -1940,6 +1940,10 @@ header .logo a {
   background: #ffffff;
   padding-top: 12rem;
   padding-bottom: 12rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 4rem 1rem;
 }
 #portfolio .folio-item {
   padding: 20px;
@@ -2022,16 +2026,45 @@ header .logo a {
 
 .portfolio_arrangement {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 10px; /* Space between items */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .portfolio_item {
-  aspect-ratio: 1 / 1; /* Keeps each item square */
-  height: 90%;
-  width: 87%; /* Ensures full width inside the grid */
+  width: 100%;
+  height: auto;
+  min-height: 300px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.portfolio-overlay {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.23);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.portfolio-overlay:hover {
+  transform: scale(1.03);
+}
+
+/* Portfolio section wrapper */
+#portfolio {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 4rem 1rem;
 }
 
 .top-portfolio-img {
@@ -2088,6 +2121,62 @@ header .logo a {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
+
+/* Responsive breakpoints */
+@media only screen and (max-width: 1024px) {
+  .portfolio_arrangement {
+    grid-template-columns: repeat(1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .portfolio_item {
+    min-height: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolio_arrangement {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .portfolio_item {
+    min-height: 200px;
+  }
+
+  .portfolio-overlay {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio_arrangement {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0px;
+  }
+
+  .portfolio_item {
+    min-height: 250px;
+  }
+
+#portfolio .folio-item {
+  padding: 10px;
+}
+
+.portfolio-overlay {
+  padding: 150px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.23);
+}
+.row {
+  padding: 0;
+}
+}
+
+
 
 /**
  * responsive:
