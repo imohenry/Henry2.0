@@ -1417,11 +1417,13 @@ header .logo a {
 }
 
 #intro {
-  background: #151515 url(../images/henry-img.jpg) no-repeat center bottom;
+  /* Update the existing background properties */
+  background: #151515 url("../images/henry-img.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll; /* Change from fixed to scroll for mobile */
   width: 100%;
   height: 100%;
   min-height: 720px;
@@ -1429,6 +1431,19 @@ header .logo a {
   position: relative;
   text-align: center;
 }
+
+/* Add a media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  #intro {
+    background-attachment: scroll; /* Ensure scroll on mobile */
+    background-position: center center;
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+  }
+}
+
 .intro-overlay {
   position: absolute;
   top: 0;
@@ -2000,6 +2015,75 @@ header .logo a {
   left: 0;
 }
 #portfolio .folio-item:hover img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.portfolio_arrangement {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10px; /* Space between items */
+}
+
+.portfolio_item {
+  aspect-ratio: 1 / 1; /* Keeps each item square */
+  height: 90%;
+  width: 87%; /* Ensures full width inside the grid */
+  display: flex;
+  align-items: center;
+}
+
+.top-portfolio-img {
+  height: 300px;
+}
+
+.portfolio-overlay {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  margin: 5px;
+  padding: 200px;
+  border-radius: 22px;
+  box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.23);
+  /* margin: 0 auto; */
+  max-width: 441px;
+  /* border: 10px solid white; */
+}
+
+
+#isw-blog {
+  background-image: url("../images/portfolio/isw-blog.png");
+}
+
+.portfolio-inner {
+  padding: 10px;
+}
+
+#isw-newsletter {
+  background-image: url("../images/portfolio/isw-newsletter.png");
+}
+
+#rank-checker {
+  background-image: url("../images/portfolio/rank-checker.png");
+}
+
+#opentape {
+  background-image: url("../images/portfolio/opentape.png");
+}
+
+#verve {
+  background-image: url("../images/portfolio/Verve-home.png");
+}
+
+#mintlify {
+  background-image: url("../images/portfolio/mintlify.png");
+  /* box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.23);
+  margin: 0 auto; */
+}
+
+#portfolio .folio-item:hover .portfolio-overlay {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
