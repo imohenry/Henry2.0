@@ -246,3 +246,25 @@
     }
   });
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const seeMoreBtn = document.getElementById('see-more-skills');
+    const hiddenSkills = document.querySelector('.hidden-skills');
+
+    seeMoreBtn.addEventListener('click', function() {
+        if (hiddenSkills.classList.contains('show')) {
+            hiddenSkills.classList.remove('show');
+            seeMoreBtn.textContent = 'See More Skills';
+            // Wait for animation to complete before hiding
+            setTimeout(() => {
+                hiddenSkills.style.display = 'none';
+            }, 500);
+        } else {
+            hiddenSkills.style.display = 'block';
+            // Trigger reflow before adding the class
+            hiddenSkills.offsetHeight;
+            hiddenSkills.classList.add('show');
+            seeMoreBtn.textContent = 'See Less';
+        }
+    });
+});
