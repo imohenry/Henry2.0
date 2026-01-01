@@ -99,7 +99,7 @@
   /*----------------------------------------------------*/
   /*	Modal Popup
 	------------------------------------------------------*/
-  $(".item-wrap a").magnificPopup({
+  $(".item-wrap a, .portfolio-card-link").magnificPopup({
     type: "inline",
     fixedContentPos: false,
     removalDelay: 300,
