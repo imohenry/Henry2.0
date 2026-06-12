@@ -1,1143 +1,328 @@
 <!DOCTYPE html>
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-
-   <!--- basic page needs
-   ================================================== -->
    <meta charset="utf-8">
-	<title>Portfolio</title>
-	<meta name="description" content="Imoh Henry's Portfolio page">  
-	<meta name="author" content="Henry Imoh">
-    <meta name="keywords" content="Portfolio, web developer, Henry Imoh, website, build, LinkedIn, facebook, henry, imoh, cat, portfolio, good developer, expert frontend developer, full stack developer, HTML, CSS, Html developer, Javascript developer, Henry Imoh portfolio, knowledge, github, code, coding, grease, build apps, code apps, UI Developer, designer, frontend web developer, money, back-end developer, Developer, python, swift, html, css, programmer, good man, new, value, coder, job, employment, coding, hire.">
+   <title>Portfolio — Henry Imoh</title>
+   <meta name="description" content="Imoh Henry's Portfolio page">
+   <meta name="author" content="Henry Imoh">
+   <meta name="keywords" content="Portfolio, web developer, Henry Imoh, frontend engineer, full stack developer, HTML, CSS, JavaScript developer, technical writer, hire">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/modern.css">
+   <link rel="icon" type="image/png" href="favicon.png">
 
- 	<!-- CSS
-   ================================================== -->
-   <style>
-	   .desc {
-		   font-family: poppins-regular;
-	   } 
-   </style>
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">     
-
-   <!-- script
-   ================================================== -->   
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
-
-   <!-- favicons
-	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VPTL20MDY4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VPTL20MDY4');
-</script>
-
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPTL20MDY4"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-VPTL20MDY4');
+   </script>
 </head>
 
 <body id="top">
 
-	<!-- header 
-   ================================================== -->
-   <header>   	
-   	<div class="row">
-   		<div class="top-bar" >
-   			<a class="menu-toggle" href="#"><span>Menu</span></a>
-
-	   		<div class="logo" style="float: left;">
-		         <a href="index.html" > <span>HENRY</span></a>
-		      </div>	   
-	
-		   	<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a  href="index.html#intro" title="">Home</a></li>
-						<li><a href="index.html#about" title="">About</a></li>
-						<li><a href="index.html#resume" title="">Resume</a></li>
-						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>
-						<li><a  href="index.html#services" title="">Services</a></li>
-						<li><a  href="photography.html" title="">photography</a></li>					
-						<li><a  href="index.html#contact" title="">Contact</a></li>				
-					</ul>
-				</nav>    		
-   		</div> <!-- /top-bar --> 
-   		
-   	</div> <!-- /row --> 		
-   </header> <!-- /header -->
-
-   <!-- Portfolio Section/ past works 
-   ================================================== -->
-	<section id="portfolio">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5 style="font-size: 40px;">Portfolio</h5>
-   			<h1>Check Out Some of my works. (Written works are below)</h1>
-
-   			<p class="lead">Products built by code and some UI design</p>
-
-   		</div>   		
-   	</div> <!-- /section-intro--> 
-
-   	<div class="row portfolio-content">
-
-   		<div class="col-twelve">
-
-   			<!-- portfolio-wrapper -->
-	         <div id="folio-wrapper" class="portfolio-cards-grid">
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/hackmamba-img.png" alt="Hackmamba" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-hackmamba" class="portfolio-card-link">Official Hackmamba website <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Fullstack Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/opentape.png" alt="Opentape" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-opentape" class="portfolio-card-link">Opentape web app and landing page <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Fullstack Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/boki.png" alt="Boki" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-boki" class="portfolio-card-link">Boki <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Fullstack Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/henfeets-home.jpg" alt="HenFeets" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-henfeets" class="portfolio-card-link">HenFeets web store <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Fullstack Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/fira-page.jpg" alt="Fira Health" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-firahealth" class="portfolio-card-link">Fira Health website <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web Design & Development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-				 
-				 
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/rank-checker.png" alt="SERP Checker" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-rankchecker" class="portfolio-card-link">SERP Checker <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Fullstack Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/mintlify.png" alt="hackmamba X mintlify" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-mintlify" class="portfolio-card-link">hackmamba X mintlify landing page <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/isw-newsletter.png" alt="Interswitch newsletter" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-iswnews" class="portfolio-card-link">Interswitch newsletter <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/isw-blog.png" alt="Interswitch Blog" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-iswblog" class="portfolio-card-link">Interswitch Blog <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Verve-home.png" alt="Verve" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-verve" class="portfolio-card-link">Verve <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Interswitch-skillbase.jpg" alt="Interswitch Skillbase" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-skillbase" class="portfolio-card-link">Interswitch Skillbase <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-			 
-			 
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Eclat health.jpg" alt="EClat Healthcare" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-13" class="portfolio-card-link">EClat Healthcare <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Vervelife.jpg" alt="Verve Life" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-vervelife" class="portfolio-card-link">Verve Life <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Geometria-front.jpg" alt="Geometria" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-01" class="portfolio-card-link">Geometria <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development / Copywriting</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Interswitch-Neverstop.jpg" alt="Interswitch Neverstop" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-neverstop" class="portfolio-card-link">Interswitch Neverstop <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Cassy-front.jpg" alt="Cassy blog" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-02" class="portfolio-card-link">Cassy blog <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Sheccoks-front.jpg" alt="Shecooks" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-03" class="portfolio-card-link">Shecooks <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web Development / Copy & Blog writing</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Get2work-front.jpg" alt="Get2work product" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-14" class="portfolio-card-link">Get2work product <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web Development / Copywriting</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-			 
-		
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/water-front.jpg" alt="Tracker design" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-04" class="portfolio-card-link">Tracker design <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">UI design</p>
-					</div>
-				</div> <!-- /portfolio-card -->     
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Calculator-front.jpg" alt="Simple Calculator" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-05" class="portfolio-card-link">Simple Calculator <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web Development</p>
-					</div>
-				</div> <!-- /portfolio-card -->
-
-				
-
-				<div class="portfolio-card">
-					<div class="portfolio-card-logo">
-						<img src="images/portfolio/Fablane-front.jpg" alt="E-commerce web app" class="portfolio-logo-img">
-					</div>
-					<div class="portfolio-card-content">
-						<h3 class="portfolio-card-title">
-							<a href="#modal-06" class="portfolio-card-link">E-commerce web app <i class="fa fa-external-link"></i></a>
-						</h3>
-						<p class="portfolio-card-desc">Web development</p>
-					</div>
-				</div> <!-- /portfolio-card -->   
-
-	            <!-- MODAL POPUPS - begin
-	            ============================================================= -->
-				<div id="modal-hackmamba" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/hackmamba-img.png" alt="Hackmamba website" />
-					</div>      	
-					<div class="description-box">
-						<h4>Hackmamba - Official website of Hackmamba</h4>		      
-						<p>
-							I built the official website of Hackmamba, a technical content agency for SaaS companies. <Strong> Built with Astro.js, React.js, Sanity CMS and Tailwind CSS</Strong>.
-						</p>
-						<div class="categories">Fullstack Web Development</div>			               
-					</div>
-
-					<div class="link-box">
-						<a href="https://hackmamba.io/" target="_blank">View Project</a>
-						<a class="popup-modal-dismiss">Close</a>
-					</div>
-				</div> <!-- /modal-opentape -->
-				<div id="modal-opentape" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/opentape.png" alt="Geometria" />
-					</div>      	
-					<div class="description-box">
-						<h4>Opentape - Record high quality video messages in your browser</h4>		      
-						<p>
-							Opentape is a modern web app that lets you record and share high-quality video messages directly from your browser—no downloads required. <Strong> Built with Next.js, React.js, and Tailwind CSS</Strong>. 
-						</p>
-						<div class="categories">Fullstack Web Development</div>			               
-					</div>
-
-					<div class="link-box">
-						<a href="https://opentape.io/" target="_blank">View Project</a>
-						<a class="popup-modal-dismiss">Close</a>
-					</div>
-				</div> <!-- /modal-opentape -->
-
-				<div id="modal-boki" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/boki.png" alt="Boki" />
-					</div>      	
-					<div class="description-box">
-						<h4>Boki - Content Operations Platform</h4>		      
-						<p>
-							Boki is a platform for teams to plan, write, and distribute content. <strong>Built with React.js, Next.js, Tailwind CSS, and more.</strong> <br><br>
-
-							I was the primary frontend engineer for Boki, responsible for the development of the platform's frontend.
-						</p>
-						<div class="categories">Frontend Engineering</div>			               
-					</div>
-
-					<div class="link-box">
-						<a href="https://boki.io/" target="_blank">View Project</a>
-						<a class="popup-modal-dismiss">Close</a>
-					</div>
-				</div> <!-- /modal-boki -->
-
-				<div id="modal-henfeets" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/henfeets-home.jpg" alt="HenFeets" />
-					</div>      	
-					<div class="description-box">
-						<h4>HenFeets - The official web store of HenFeets</h4>		      
-						<p>
-							HenFeets is an online shoe and accessories store that offers a wide range of shoes and accessories for women. <strong>Built with React.js, Next.js, Tailwind CSS, and more.</strong> <br><br>		
-							I am the primary Software Engineer for HenFeets, responsible for the development of the platform's frontend and backend. 
-							<br>
-							I built the store front and also an admin dashboard for the company to manage the store, products, orders, analytics and so on.
-						</p>
-						<div class="categories">Fullstack Web Development</div>			               
-					</div>
-
-					<div class="link-box">
-						<a href="https://henfeets.store/" target="_blank">View Project</a>
-						<a class="popup-modal-dismiss">Close</a>
-					</div>
-				</div> <!-- /modal-henfeets -->
-
-				<div id="modal-firahealth" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/fira-page.jpg" alt="Fira Health" />
-					</div>      	
-					<div class="description-box">
-						<h4>Fira Health - Official Website</h4>		      
-						<p>
-							I designed and developed the entirety of the Fira Health website while working for the company. The website effectively communicates the company's healthcare services and values with a focus on user experience and accessibility. <strong>Built with modern web technologies</strong>.
-						</p>
-						<div class="categories">Web Design & Development</div>			               
-					</div>
-
-					<div class="link-box">
-						<a href="https://firahealth.com/" target="_blank">View Project</a>
-						<a class="popup-modal-dismiss">Close</a>
-					</div>
-				</div> <!-- /modal-firahealth -->
-
-				<div id="modal-rankchecker" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/rank-checker.png" alt="ramkchecker" />
-					</div>      	
-					<div class="description-box">
-						<h4>SERP Checker - The Simplest Article Rank Checker You'll Ever Need</h4>		      
-						<p>
-							Rankchecker is a simple web app that lets you check the rank of your articles on Google. <Strong> Built with Next.js, React.js, Redis, PM2, and Tailwind CSS</Strong>.
-						</p>
-						<div class="categories">Fullstack Web Development</div>			               
-					</div>
-
-					<div class="link-box">
-						<a href="https://bestserptracker.com/" target="_blank">View Project</a>
-						<a class="popup-modal-dismiss">Close</a>
-					</div>
-				</div> <!-- /modal-rankchecker -->
-
-				<div id="modal-mintlify" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/mintlify.png" alt="ramkchecker" />
-					</div>      	
-					<div class="description-box">
-						<h4>hackmamba X mintlify website - The partnership landing page of Hackmamba and Mintlify</h4>		      
-						<p>
-							The hackmamba X mintlify landing page is a partnership landing page that showcases the collaboration between Hackmamba and Mintlify as documentation giants. <Strong> Built with React.js, and Tailwind CSS</Strong>.
-						</p>
-						<div class="categories">Fullstack Web Development</div>			               
-					</div>
-
-					<div class="link-box">
-						<a href="https://hackmamba.io/mintlify/" target="_blank">View Project</a>
-						<a class="popup-modal-dismiss">Close</a>
-					</div>
-				</div> <!-- /modal-mintlify -->
-
-				<div id="modal-iswnews" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/isw-newsletter.png" alt="Interswitch newsletter" />
-					</div>      	
-
-				  <div class="description-box">
-					 <h4>Interswitch newsletter - The official newsletter web app of Interswitch Group</h4>		      
-					 <p>
-						The Interswitch newsletter allows users to subscribe to the Interswitch newsletter and receive updates on the latest news and events from the company. <Strong> Built with Astro.js, React.js, Contentful CMS, and SCSS</Strong>.
-					 </p>
-
-					 <div class="categories">Web Development</div>			               
-				  </div>
-
-				<div class="link-box">
-					<a href="https://interswitchgroup.com/news/" target="_blank">View Project</a>
-					 <a class="popup-modal-dismiss">Close</a>
-				</div>		      
-		  </div> <!-- /modal-newsletter -->
-
-
-			<div id="modal-iswblog" class="popup-modal slider mfp-hide">	
-
-				<div class="media">
-					<img src="images/portfolio/isw-blog.png" alt="Interswitch blog" />
-				</div>      	
-
-			<div class="description-box">
-				<h4>Interswitch Blog - The official Blog of Interswitch Group</h4>		      
-				<p>
-					The Interswitch blog is a platform for sharing insights, news, and updates about the company and the fintech industry. Equipped with tags, filtering and lots more <Strong> Built with Astro.js, React.js, Contentful CMS, and SCSS</Strong>.
-				</p>
-
-				<div class="categories">Web Development</div>			               
-			</div>
-
-			<div class="link-box">
-				<a href="https://interswitchgroup.com/blog/" target="_blank">View Project</a>
-				<a class="popup-modal-dismiss">Close</a>
-			</div>		      
-			</div> <!-- /modal-newsletter -->
-
-
-					<div id="modal-verve" class="popup-modal slider mfp-hide">	
-
-						<div class="media">
-							<img src="images/portfolio/Verve-home.png" alt="Geometria" />
-						</div>      	
-
-					  <div class="description-box">
-						 <h4>Verve - Official website of the multinational Verve card</h4>		      
-						 <p>Verve is Africa's most successful card brand with payment tokens and card options that power commerce across Africa.</p>
-
-						 <div class="categories">Web Development</div>			               
-					  </div>
-
-					<div class="link-box">
-						<a href="https://www.myverveworld.com/" target="_blank">View Project</a>
-						 <a class="popup-modal-dismiss">Close</a>
-					</div>		      
-			  </div> <!-- /modal-Verve -->
-
-
-				   <div id="modal-skillbase" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/modals/Skillbase-modal.jpg" alt="Interswitch Skillbase" />
-					</div>      	
-
-				  <div class="description-box">
-					 <h4>Interswitch Skillbase learning platform</h4>		      
-					 <p>Skillbase offers a wide range of educational opportunities to help you succeed in this rapidly-growing field. From payment processing to digital currency, Skillbase have a course to fit your needs.</p>
-
-					 <div class="categories">Web Development</div>			               
-				  </div>
-
-				<div class="link-box">
-				   <a href="https://skillbase.interswitchgroup.com/" target="_blank">View Project</a>
-					 <a class="popup-modal-dismiss">Close</a>
-				</div>		      
-
-			  </div> <!-- /modal-02 -->
-			 
-			   <div id="modal-13" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/Eclat health.jpg" alt="Crimson investment" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>EClat Healthcare</h4>		      
-					      <p> Eclat seeks to improve the availability and quality of primary healthcare delivery in Nigerian healthcare space, using technology.</p>
-
-					      <div class="categories">Frontend development</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://eclat.interswitchgroup.com/" target="_blank">View Project</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-13 -->
-
-				   <div id="modal-vervelife" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/modals/Vervelife.jpg" alt="Crimson investment" />
-					</div>      	
-
-				  <div class="description-box">
-					 <h4>Verve Life</h4>		      
-					 <p> VerveLife is Africa's Biggest Fitness Party, an all-emcompassing fitness experience that combines exercise, music, fun, networking, healthy food, and lots more.</p>
-
-					 <div class="categories">Frontend development</div>			               
-				  </div>
-
-				<div class="link-box">
-				   <a href="https://www.myverveworld.com/life/" target="_blank">View Project</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
-				</div>		      
-
-			  </div> <!-- /modal-vervelife -->
-
-			  <div id="modal-01" class="popup-modal slider mfp-hide">	
-
-				<div class="media">
-					<img src="images/portfolio/modals/Geometria.png" alt="Geometria" />
-				</div>      	
-
-			  <div class="description-box">
-				 <h4>Geometria - fitness web app</h4>		      
-				 <p>Geometria is a subscription based web app, structured to provide services like gym instructions, weight loss guidance, yoga training and so on. All at the users fingertips.</p>
-
-				 <div class="categories">Web Development</div>			               
-			  </div>
-
-			<div class="link-box">
-			   <a href="https://geometrial.netlify.app/" target="_blank">View Project</a>
-				 <a class="popup-modal-dismiss">Close</a>
-			</div>		      
-
-		  </div> <!-- /modal-02 -->
-
-				   <div id="modal-02" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/Cassy-blog.png" alt="Cassy blog" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Cassy Njoku blog</h4>		      
-					      <p>Lifestyle blog, for everything urban news and everyday tips and tricks. Have a look below</p>
-
-					      <div class="categories">Web Development</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://imohenry.github.io/Cassy-Njoku">View Project</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-02 -->
-
-				   <div id="modal-03" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/shecooks.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Shecooks</h4>		      
-					      <p>Online restaurant for all your african meals and treats. All you need to do is order and it arrives</p>
-
-					      <div class="categories">Web development / copywriting</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://shecooks.netlify.app/" target="_blank">View Project</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-03 -->
-
-				   <div id="modal-14" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/modals/G2w-modal.png" alt="Get to work product" />
-					</div>      	
-
-				  <div class="description-box">
-					 <h4>Get2work main product</h4>		      
-					 <p>Get2work a company that connects users to verified professional handymen.</p>
-
-					 <div class="categories">Web Development / copywriitng</div>			               
-				  </div>
-
-				<div class="link-box">
-				   <a href="https://get2work.netlify.app/index.html">View Project</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
-				</div>		      
-
-			  </div> <!-- /modal-07 -->
-			 
-			  <div id="modal-neverstop" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/portfolio/modals/Interswitch-Neverstop.jpg" alt="Evergrowing finance" />
-					</div>      	
-
-				  <div class="description-box">
-					 <h4>Interswitch at 20</h4>		      
-					 <p>The Interswitch 20th anniversary website</p>
-
-					 <div class="categories">Web Development</div>			               
-				  </div>
-
-				<div class="link-box">
-				   <a href="https://neverstop.interswitchgroup.com/">View Project</a>
-					 <a href="#" class="popup-modal-dismiss">Close</a>
-				</div>		      
-
-			  </div> <!-- /modal-15 -->
-
-				   <div id="modal-04" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/UI(1).png" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Water intake tracker minimal design</h4>		      
-					      <p>Designed with Figma. A simplistic design of a water intake tracking app.</p>
-
-					      <div class="categories">UI design</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="#">View Project</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-04 -->
-
-				   <div id="modal-05" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/Calculator .png" alt="Simple Calculator" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Simple Calculator</h4>		      
-					      <p>Simple web calculator, with minimal design.</p>
-
-					      <div class="categories">Web Development</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="https://imohenry.github.io/Henry-calculator/">View Project</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-05 -->
-
-				   <div id="modal-06" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/Fablane.png" alt="fablanebyjulz E-commerce" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>COMING SOON</h4>		      
-					      <p>Clothing E-commerce web app. Launching soon.</p>
-
-					      <div class="categories">Web development</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="#portfolio">View Project</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-06 -->
-
-
-				   <!-- modal popups - end
-	            ============================================================= -->
-
-	         </div> <!-- /portfolio-wrapper --> 
-
-   		</div>  <!-- /twelve -->   
-
-   	</div> <!-- /portfolio-content --> 
-		
-	</section> <!-- /portfolio --> 
-
-
-<!--Portfolio past works end-->
-
-
-<!-- Portfolio Section writing works 
-   ================================================== -->
-   <section id="portfolio">
-
-	<div class="row section-intro">
-	   <div class="col-twelve">
-
-		<!---   <h5>Port</h5> -->
-		   <h1>Writing Portfolio.</h1>
-
-		   <p class="lead">My writing works. (Disclosable works for now)</p>
-
-	   </div>   		
-   </div> <!-- /section-intro--> 
-
-   <div class="row portfolio-content">
-
-	   <div class="col-twelve">
-
-		   <!-- portfolio-wrapper -->
-		 <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-
-			 <div class="bgrid folio-item">
-			   <div class="item-wrap">
-				   <img src="images/portfolio/Ecommerce-front.jpg" alt="Liberty">
-				  <a href="#modal-07" class="overlay">	                  	           
-					 <div class="folio-item-table">
-						 <div class="folio-item-cell">
-									<h3 class="folio-title">Ecommerce digital marketing</h3>	     					    
-									  <span class="folio-types">
-										  Blog / SEO writing
-									</span>
-								</div>	                      	
-					 </div>                    
-				  </a>
-			   </div>	               
-				</div> <!-- /folio-item -->
-
-				<div class="bgrid folio-item">
-			   <div class="item-wrap">
-				   <img src="images/portfolio/Depression-front.jpg" alt="Shutterbug">
-				   <a href="#modal-08" class="overlay">              		                  
-					 <div class="folio-item-table">
-						 <div class="folio-item-cell">
-							 <h3 class="folio-title">Navigating the Dark Waters of Depression</h3>	     					    
-									 <span class="folio-types">
-										  Mental health article
-								   </span>		     		
-								</div> 	                      	
-					 </div>                    
-				  </a>
-			   </div>
-				</div> <!-- /folio-item -->
-
-			<div class="bgrid folio-item">
-			   <div class="item-wrap">
-				   <img src="images/portfolio/ADHD-front.jpg"alt="Clouds">
-				  <a href="#modal-09" class="overlay">             		                  
-					 <div class="folio-item-table">
-						 <div class="folio-item-cell">
-							 <h3 class="folio-title">Living With ADHD As An Adult</h3>	     					    
-									 <span class="folio-types">
-										Blog / SEO writing
-								   </span>		     		
-								</div> 	                      	
-					 </div>                    
-				  </a>
-			   </div>
-				</div> <!-- /folio-item -->
-
-			<div class="bgrid folio-item">
-			   <div class="item-wrap">
-				   <img src="images/portfolio/Bad-day-front.jpg" alt="Beetle">
-				  <a href="#modal-10" class="overlay">                  	                 
-					 <div class="folio-item-table">
-						 <div class="folio-item-cell">
-							 <h3 class="folio-title">A bad day</h3>	     					    
-									 <span class="folio-types">
-										  Blog Writing
-								   </span>		     		
-								</div>  	                      	
-					 </div>                    
-				  </a>
-			   </div>
-				</div> <!-- /folio-item -->     
-
-				<div class="bgrid folio-item">
-			   <div class="item-wrap">
-				   <img src="images/portfolio/ABS-front.jpg" alt="Absence Seizure: All you need to know">
-				  <a href="#modal-11" class="overlay">             		                  
-					 <div class="folio-item-table">
-						 <div class="folio-item-cell">
-							 <h3 class="folio-title">Absence seizure: All you need to know</h3>	     					    
-									 <span class="folio-types">
-										  Content writing
-								   </span>		     		
-								</div> 	                      	
-					 </div>                    
-				  </a>
-			   </div>
-				</div> <!-- /folio-item -->
-
-			<div class="bgrid folio-item">
-			   <div class="item-wrap">
-				   <img src="images/portfolio/Insomnia-front.jpg" alt="Salad">
-				  <a href="#modal-12" class="overlay">
-					 <div class="folio-item-table">
-						 <div class="folio-item-cell">
-							 <h3 class="folio-title">Insomnia</h3>	     					    
-									 <span class="folio-types">
-										  Blog writing
-								   </span>		     		
-								</div>	                      	
-					 </div>                    
-				  </a>
-			   </div>
-				</div> <!-- /folio-item -->   
-
-			<!-- modal popups - begin
-			============================================================= -->
-			<div id="modal-07" class="popup-modal slider mfp-hide">	
-
-					 <div class="media">
-						 <img src="images/portfolio/Ecommerce-front.jpg" alt="How to use E-commerce content marketing to grow your business" />
-					 </div>      	
-
-				   <div class="description-box">
-					  <h4>How to use E-commerce content marketing to grow your business</h4>		      
-					  <p>This article exposes one to the intricacies of E-commerce content marketing and how it csn hekp grow you business.</p>
-
-					  <div class="categories">SEO / blog writing</div>			               
-				   </div>
-
-				 <div class="link-box">
-					<a href="https://docs.google.com/document/d/19GUOnZel-0Atw56Toa1dCgFny9AVBDcbGukfZiGZYyI/edit?usp=sharing">Read more</a>
-					  <a href="#" class="popup-modal-dismiss">Close</a>
-				 </div>		      
-
-			   </div> <!-- /modal-01 -->
-
-			   <div id="modal-08" class="popup-modal slider mfp-hide">	
-
-					 <div class="media">
-						 <img src="images/portfolio/Depression-front.jpg" alt="Dell Inspiron 15 laptop review" />
-					 </div>      	
-
-				   <div class="description-box">
-					  <h4>Navigating the dark waters of depression</h4>		      
-					  <p>This article will shed some light on depression in general and provide some helpful tips on combating this darkness.</p>
-
-					  <div class="categories">Mental health article</div>			               
-				   </div>
-
-				 <div class="link-box">
-					<a href="https://medium.com/@henryimoh2/navigating-the-dark-waters-of-depression-breaking-the-stigma-2b8fb632a875">Read more</a>
-					  <a href="#" class="popup-modal-dismiss">Close</a>
-				 </div>		      
-
-			   </div> <!-- /modal-02 -->
-
-			   <div id="modal-09" class="popup-modal slider mfp-hide">	
-
-					 <div class="media">
-						 <img src="images/portfolio/ADHD-front.jpg" alt="Blogger Outreach" />
-					 </div>      	
-
-				   <div class="description-box">
-					  <h4>Living With ADHD As An Adult</h4>		      
-					  <p>ADHD is a disorder that can affect both children and adults. Coping with ADHD can be challenging since the symptoms can make daily tasks more difficult. </p>
-
-					  <div class="categories">SEO & Blog Writing</div>			               
-				   </div>
-
-				 <div class="link-box">
-					<a href="https://medium.com/@henryimoh2/living-with-adhd-as-an-adult-f5fc093e1d5d">Read more</a>
-					  <a href="#" class="popup-modal-dismiss">Close</a>
-				 </div>		      
-
-			   </div> <!-- /modal-03 -->
-
-			   <div id="modal-10" class="popup-modal slider mfp-hide">	
-
-					 <div class="media">
-						 <img src="images/portfolio/Bad-day-front.jpg" alt="Having a bad day" />
-					 </div>      	
-
-				   <div class="description-box">
-					  <h4>Having a bad day?</h4>		      
-					  <p>A single bad day can seem like the end of the world. it shouldn't be like that, we deserve better, read on....</p>
-
-					  <div class="categories">Blog Writing</div>			               
-				   </div>
-
-				 <div class="link-box">
-					<a href="https://medium.com/@henryimoh2/have-a-bad-day-3c4ae698cb1e">Read more</a>
-					  <a href="#" class="popup-modal-dismiss">Close</a>
-				 </div>		      
-
-			   </div> <!-- /modal-04 -->
-
-			   <div id="modal-11" class="popup-modal slider mfp-hide">	
-
-					 <div class="media">
-						 <img src="images/portfolio/ABS-front.jpg" alt="Absence seizures" />
-					 </div>      	
-
-				   <div class="description-box">
-					  <h4>Absence Seizures</h4>		      
-					  <p>A comprehensive exploration of the infamous seizure called Absence Seizure.</p>
-
-					  <div class="categories">Blog writing</div>			               
-				   </div>
-
-				 <div class="link-box">
-					<a href="https://medium.com/@henryimoh2/absence-seizure-all-you-need-to-know-f38acbc065d2">Read more</a>
-					  <a href="#" class="popup-modal-dismiss">Close</a>
-				 </div>		      
-
-			   </div> <!-- /modal-05 -->
-
-			   <div id="modal-12" class="popup-modal slider mfp-hide">	
-
-					 <div class="media">
-						 <img src="images/portfolio/Insomnia-front.jpg" alt="Surviving a panic attack" />
-					 </div>      	
-
-				   <div class="description-box">
-					  <h4>Insomnia: a sleep disorder or a slow death?</h4>		      
-					  <p>Insomnia is the inability to fall, remain, or acquire enough restful sleep.</p>
-
-					  <div class="categories">Branding</div>			               
-				   </div>
-
-				 <div class="link-box">
-					<a href="https://medium.com/@henryimoh2/insomnia-a-mental-disorder-or-a-slow-death-a4257fc405e4">Read more</a>
-					  <a href="#" class="popup-modal-dismiss">Close</a>
-				 </div>		      
-
-			   </div> <!-- /modal-06 -->
-
-
-			   <!-- modal popups - end
-			============================================================= -->
-
-		 </div> <!-- /portfolio-wrapper --> 
-
-	   </div>  <!-- /twelve -->   
-
-   </div> <!-- /portfolio-content --> 
-	
-</section> <!-- /portfolio --> 
-
-
-<div class="row contact-info">
-
-    <div class="col-four tab-full">
-
-        <div class="icon">
-            <i class="icon-pin"></i>
-        </div>
-
-        <h5>Where to find me</h5>
-
-        <p>
-    Lagos, Nigeria<br>
-     </p>
-
-    </div>
-
-    <div class="col-four tab-full collapse">
-
-        <div class="icon">
-            <i class="icon-mail"></i>
-        </div>
-
-        <h5>Email Me At</h5>
-
-        <p>Henryimoh2@gmail.com<br>
-            Henry_imoh@yahoo.com			     
-        </p>
-
-    </div>
-
-    <div class="col-four tab-full">
-
-        <div class="icon">
-            <i class="icon-phone"></i>
-        </div>
-
-        <h5>Call Me At</h5>
-
-        <p>Phone: (+234) 813 533 5812<br>
-            Mobile: (+234) 904 853 6590<br>
-        </p>
-
-    </div>
-    
-</div> <!-- /contact-info -->
- 
-</section> <!-- /contact -->
-
-
-<!-- footer
-================================================== -->
-
-<footer>
-  <div class="row">
-
-      <div class="col-six tab-full pull-right social">
-
-          <ul class="footer-social">        
-             <li><a href="https://web.facebook.com/imoh.henry.56?ref=bookmarks"><i class="fa fa-facebook"></i></a></li>
-        <!---   <li><a href="#"><i class="fa fa-behance"></i></a></li> -->
-        <li><a href="https://twitter.com/i_am_imoh"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/henry-imoh-5472171a1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3rLzwD1RT%2FWyz7m2rqUBkQ%3D%3D"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="http://www.instagram.com/imohenry"><i class="fa fa-instagram"></i></a></li>
-        </ul> 
-           
+   <header class="site-header">
+      <div class="container nav-bar">
+         <a class="brand" href="index.html">HENRY<span>.</span></a>
+         <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+         <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#resume">Resume</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="Portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+         </ul>
+      </div>
+   </header>
+
+   <section class="page-hero">
+      <div class="container">
+         <p class="eyebrow" style="justify-content:center;">Portfolio</p>
+         <h1>Check out some of <span class="grad-text">my work</span>.</h1>
+         <p>Products built with code, some UI design — and my written works below.</p>
+      </div>
+   </section>
+
+   <!-- dev work -->
+   <section id="portfolio" style="padding-top:1rem;">
+      <div class="container">
+         <div class="filters reveal">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="fullstack">Fullstack</button>
+            <button data-filter="web">Web Development</button>
+            <button data-filter="design">UI Design</button>
+         </div>
+
+         <div class="work-grid">
+            <article class="work-card reveal" data-cat="fullstack" data-modal
+               data-img="images/portfolio/hackmamba-img.png" data-title="Hackmamba — Official website"
+               data-tag="Fullstack Web Development" data-link="https://hackmamba.io/"
+               data-desc="I built the official website of Hackmamba, a technical content agency for SaaS companies. <strong>Built with Astro.js, React.js, Sanity CMS and Tailwind CSS</strong>.">
+               <div class="work-thumb"><img src="images/portfolio/hackmamba-img.png" alt="Hackmamba" loading="lazy"></div>
+               <div class="work-body"><h3>Official Hackmamba website</h3><span class="work-tag">Fullstack</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="fullstack" data-modal
+               data-img="images/portfolio/opentape.png" data-title="Opentape — Record high quality video messages in your browser"
+               data-tag="Fullstack Web Development" data-link="https://opentape.io/"
+               data-desc="Opentape is a modern web app that lets you record and share high-quality video messages directly from your browser—no downloads required. <strong>Built with Next.js, React.js, and Tailwind CSS</strong>.">
+               <div class="work-thumb"><img src="images/portfolio/opentape.png" alt="Opentape" loading="lazy"></div>
+               <div class="work-body"><h3>Opentape web app &amp; landing page</h3><span class="work-tag">Fullstack</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="fullstack" data-modal
+               data-img="images/portfolio/boki.png" data-title="Boki — Content Operations Platform"
+               data-tag="Frontend Engineering" data-link="https://boki.io/"
+               data-desc="Boki is a platform for teams to plan, write, and distribute content. <strong>Built with React.js, Next.js, Tailwind CSS, and more.</strong><br><br>I was the primary frontend engineer for Boki, responsible for the development of the platform's frontend.">
+               <div class="work-thumb"><img src="images/portfolio/boki.png" alt="Boki" loading="lazy"></div>
+               <div class="work-body"><h3>Boki</h3><span class="work-tag">Fullstack</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="fullstack" data-modal
+               data-img="images/portfolio/henfeets-home.jpg" data-title="HenFeets — Official web store"
+               data-tag="Fullstack Web Development" data-link="https://henfeets.store/"
+               data-desc="HenFeets is an online shoe and accessories store for women. <strong>Built with React.js, Next.js, Tailwind CSS, and more.</strong><br><br>I am the primary Software Engineer for HenFeets — I built the store front and an admin dashboard to manage the store, products, orders, analytics and more.">
+               <div class="work-thumb"><img src="images/portfolio/henfeets-home.jpg" alt="HenFeets" loading="lazy"></div>
+               <div class="work-body"><h3>HenFeets web store</h3><span class="work-tag">Fullstack</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/fira-page.jpg" data-title="Fira Health — Official Website"
+               data-tag="Web Design &amp; Development" data-link="https://firahealth.com/"
+               data-desc="I designed and developed the entirety of the Fira Health website. It effectively communicates the company's healthcare services and values with a focus on user experience and accessibility. <strong>Built with modern web technologies</strong>.">
+               <div class="work-thumb"><img src="images/portfolio/fira-page.jpg" alt="Fira Health" loading="lazy"></div>
+               <div class="work-body"><h3>Fira Health website</h3><span class="work-tag">Design &amp; Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="fullstack" data-modal
+               data-img="images/portfolio/rank-checker.png" data-title="SERP Checker — The simplest article rank checker"
+               data-tag="Fullstack Web Development" data-link="https://bestserptracker.com/"
+               data-desc="Rankchecker is a simple web app that lets you check the rank of your articles on Google. <strong>Built with Next.js, React.js, Redis, PM2, and Tailwind CSS</strong>.">
+               <div class="work-thumb"><img src="images/portfolio/rank-checker.png" alt="SERP Checker" loading="lazy"></div>
+               <div class="work-body"><h3>SERP Checker</h3><span class="work-tag">Fullstack</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/mintlify.png" data-title="Hackmamba X Mintlify — Partnership landing page"
+               data-tag="Web Development" data-link="https://hackmamba.io/mintlify/"
+               data-desc="A partnership landing page showcasing the collaboration between Hackmamba and Mintlify as documentation giants. <strong>Built with React.js and Tailwind CSS</strong>.">
+               <div class="work-thumb"><img src="images/portfolio/mintlify.png" alt="Hackmamba X Mintlify" loading="lazy"></div>
+               <div class="work-body"><h3>Hackmamba X Mintlify</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/isw-newsletter.png" data-title="Interswitch Newsletter — Official newsletter web app"
+               data-tag="Web Development" data-link="https://interswitchgroup.com/news/"
+               data-desc="The Interswitch newsletter lets users subscribe and receive updates on the latest news and events from the company. <strong>Built with Astro.js, React.js, Contentful CMS, and SCSS</strong>.">
+               <div class="work-thumb"><img src="images/portfolio/isw-newsletter.png" alt="Interswitch newsletter" loading="lazy"></div>
+               <div class="work-body"><h3>Interswitch Newsletter</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/isw-blog.png" data-title="Interswitch Blog — Official blog of Interswitch Group"
+               data-tag="Web Development" data-link="https://interswitchgroup.com/blog/"
+               data-desc="A platform for sharing insights, news, and updates about the company and the fintech industry — equipped with tags, filtering and lots more. <strong>Built with Astro.js, React.js, Contentful CMS, and SCSS</strong>.">
+               <div class="work-thumb"><img src="images/portfolio/isw-blog.png" alt="Interswitch Blog" loading="lazy"></div>
+               <div class="work-body"><h3>Interswitch Blog</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/Verve-home.png" data-title="Verve — Official website of the multinational Verve card"
+               data-tag="Web Development" data-link="https://www.myverveworld.com/"
+               data-desc="Verve is Africa's most successful card brand with payment tokens and card options that power commerce across Africa.">
+               <div class="work-thumb"><img src="images/portfolio/Verve-home.png" alt="Verve" loading="lazy"></div>
+               <div class="work-body"><h3>Verve</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/Skillbase-modal.jpg" data-title="Interswitch Skillbase learning platform"
+               data-tag="Web Development" data-link="https://skillbase.interswitchgroup.com/"
+               data-desc="Skillbase offers a wide range of educational opportunities — from payment processing to digital currency, there's a course to fit your needs.">
+               <div class="work-thumb"><img src="images/portfolio/Interswitch-skillbase.jpg" alt="Interswitch Skillbase" loading="lazy"></div>
+               <div class="work-body"><h3>Interswitch Skillbase</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/Eclat health.jpg" data-title="EClat Healthcare"
+               data-tag="Frontend Development" data-link="https://eclat.interswitchgroup.com/"
+               data-desc="Eclat seeks to improve the availability and quality of primary healthcare delivery in the Nigerian healthcare space, using technology.">
+               <div class="work-thumb"><img src="images/portfolio/Eclat health.jpg" alt="EClat Healthcare" loading="lazy"></div>
+               <div class="work-body"><h3>EClat Healthcare</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/Vervelife.jpg" data-title="Verve Life"
+               data-tag="Frontend Development" data-link="https://www.myverveworld.com/life/"
+               data-desc="VerveLife is Africa's biggest fitness party — an all-encompassing fitness experience combining exercise, music, fun, networking, healthy food, and lots more.">
+               <div class="work-thumb"><img src="images/portfolio/Vervelife.jpg" alt="Verve Life" loading="lazy"></div>
+               <div class="work-body"><h3>Verve Life</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/Geometria.png" data-title="Geometria — Fitness web app"
+               data-tag="Web Development / Copywriting" data-link="https://geometrial.netlify.app/"
+               data-desc="Geometria is a subscription-based web app providing services like gym instructions, weight loss guidance and yoga training — all at the user's fingertips.">
+               <div class="work-thumb"><img src="images/portfolio/Geometria-front.jpg" alt="Geometria" loading="lazy"></div>
+               <div class="work-body"><h3>Geometria</h3><span class="work-tag">Web / Copywriting</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/Interswitch-Neverstop.jpg" data-title="Interswitch at 20"
+               data-tag="Web Development" data-link="https://neverstop.interswitchgroup.com/"
+               data-desc="The Interswitch 20th anniversary website.">
+               <div class="work-thumb"><img src="images/portfolio/Interswitch-Neverstop.jpg" alt="Interswitch Neverstop" loading="lazy"></div>
+               <div class="work-body"><h3>Interswitch Neverstop</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/Cassy-blog.png" data-title="Cassy Njoku blog"
+               data-tag="Web Development" data-link="https://imohenry.github.io/Cassy-Njoku"
+               data-desc="Lifestyle blog for everything urban news and everyday tips and tricks.">
+               <div class="work-thumb"><img src="images/portfolio/Cassy-front.jpg" alt="Cassy blog" loading="lazy"></div>
+               <div class="work-body"><h3>Cassy blog</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/shecooks.jpg" data-title="Shecooks"
+               data-tag="Web Development / Copywriting" data-link="https://shecooks.netlify.app/"
+               data-desc="Online restaurant for all your African meals and treats. All you need to do is order and it arrives.">
+               <div class="work-thumb"><img src="images/portfolio/Sheccoks-front.jpg" alt="Shecooks" loading="lazy"></div>
+               <div class="work-body"><h3>Shecooks</h3><span class="work-tag">Web / Copywriting</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/G2w-modal.png" data-title="Get2work main product"
+               data-tag="Web Development / Copywriting" data-link="https://get2work.netlify.app/index.html"
+               data-desc="Get2work is a company that connects users to verified professional handymen.">
+               <div class="work-thumb"><img src="images/portfolio/Get2work-front.jpg" alt="Get2work" loading="lazy"></div>
+               <div class="work-body"><h3>Get2work product</h3><span class="work-tag">Web / Copywriting</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="design" data-modal
+               data-img="images/portfolio/modals/UI(1).png" data-title="Water intake tracker — minimal design"
+               data-tag="UI Design" data-link="#"
+               data-desc="Designed with Figma. A simplistic design of a water intake tracking app.">
+               <div class="work-thumb"><img src="images/portfolio/water-front.jpg" alt="Tracker design" loading="lazy"></div>
+               <div class="work-body"><h3>Tracker design</h3><span class="work-tag">UI Design</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/Calculator .png" data-title="Simple Calculator"
+               data-tag="Web Development" data-link="https://imohenry.github.io/Henry-calculator/"
+               data-desc="Simple web calculator, with minimal design.">
+               <div class="work-thumb"><img src="images/portfolio/Calculator-front.jpg" alt="Simple Calculator" loading="lazy"></div>
+               <div class="work-body"><h3>Simple Calculator</h3><span class="work-tag">Web Development</span></div>
+            </article>
+
+            <article class="work-card reveal" data-cat="web" data-modal
+               data-img="images/portfolio/modals/Fablane.png" data-title="E-commerce web app — Coming soon"
+               data-tag="Web Development" data-link="#"
+               data-desc="Clothing E-commerce web app. Launching soon.">
+               <div class="work-thumb"><img src="images/portfolio/Fablane-front.jpg" alt="E-commerce web app" loading="lazy"></div>
+               <div class="work-body"><h3>E-commerce web app</h3><span class="work-tag">Web Development</span></div>
+            </article>
+         </div>
+      </div>
+   </section>
+
+   <!-- writing work -->
+   <section id="writing" style="background: var(--bg-alt);">
+      <div class="container">
+         <div class="section-head center reveal">
+            <p class="eyebrow">Writing</p>
+            <h2>Writing Portfolio.</h2>
+            <p>My written works (disclosable works for now).</p>
+         </div>
+
+         <div class="work-grid">
+            <article class="work-card reveal" data-modal
+               data-img="images/portfolio/Ecommerce-front.jpg" data-title="How to use E-commerce content marketing to grow your business"
+               data-tag="SEO / Blog Writing" data-link="https://docs.google.com/document/d/19GUOnZel-0Atw56Toa1dCgFny9AVBDcbGukfZiGZYyI/edit?usp=sharing"
+               data-desc="This article exposes one to the intricacies of E-commerce content marketing and how it can help grow your business.">
+               <div class="work-thumb"><img src="images/portfolio/Ecommerce-front.jpg" alt="Ecommerce digital marketing" loading="lazy"></div>
+               <div class="work-body"><h3>Ecommerce digital marketing</h3><span class="work-tag">Blog / SEO Writing</span></div>
+            </article>
+
+            <article class="work-card reveal" data-modal
+               data-img="images/portfolio/Depression-front.jpg" data-title="Navigating the dark waters of depression"
+               data-tag="Mental Health Article" data-link="https://medium.com/@henryimoh2/navigating-the-dark-waters-of-depression-breaking-the-stigma-2b8fb632a875"
+               data-desc="This article sheds some light on depression in general and provides helpful tips on combating this darkness.">
+               <div class="work-thumb"><img src="images/portfolio/Depression-front.jpg" alt="Depression article" loading="lazy"></div>
+               <div class="work-body"><h3>Navigating the Dark Waters of Depression</h3><span class="work-tag">Mental Health</span></div>
+            </article>
+
+            <article class="work-card reveal" data-modal
+               data-img="images/portfolio/ADHD-front.jpg" data-title="Living With ADHD As An Adult"
+               data-tag="SEO &amp; Blog Writing" data-link="https://medium.com/@henryimoh2/living-with-adhd-as-an-adult-f5fc093e1d5d"
+               data-desc="ADHD is a disorder that can affect both children and adults. Coping with ADHD can be challenging since the symptoms can make daily tasks more difficult.">
+               <div class="work-thumb"><img src="images/portfolio/ADHD-front.jpg" alt="ADHD article" loading="lazy"></div>
+               <div class="work-body"><h3>Living With ADHD As An Adult</h3><span class="work-tag">Blog / SEO Writing</span></div>
+            </article>
+
+            <article class="work-card reveal" data-modal
+               data-img="images/portfolio/Bad-day-front.jpg" data-title="Having a bad day?"
+               data-tag="Blog Writing" data-link="https://medium.com/@henryimoh2/have-a-bad-day-3c4ae698cb1e"
+               data-desc="A single bad day can seem like the end of the world. It shouldn't be like that — we deserve better, read on…">
+               <div class="work-thumb"><img src="images/portfolio/Bad-day-front.jpg" alt="A bad day" loading="lazy"></div>
+               <div class="work-body"><h3>A bad day</h3><span class="work-tag">Blog Writing</span></div>
+            </article>
+
+            <article class="work-card reveal" data-modal
+               data-img="images/portfolio/ABS-front.jpg" data-title="Absence Seizures"
+               data-tag="Content Writing" data-link="https://medium.com/@henryimoh2/absence-seizure-all-you-need-to-know-f38acbc065d2"
+               data-desc="A comprehensive exploration of the infamous seizure called Absence Seizure.">
+               <div class="work-thumb"><img src="images/portfolio/ABS-front.jpg" alt="Absence seizure article" loading="lazy"></div>
+               <div class="work-body"><h3>Absence seizure: All you need to know</h3><span class="work-tag">Content Writing</span></div>
+            </article>
+
+            <article class="work-card reveal" data-modal
+               data-img="images/portfolio/Insomnia-front.jpg" data-title="Insomnia: a sleep disorder or a slow death?"
+               data-tag="Blog Writing" data-link="https://medium.com/@henryimoh2/insomnia-a-mental-disorder-or-a-slow-death-a4257fc405e4"
+               data-desc="Insomnia is the inability to fall, remain, or acquire enough restful sleep.">
+               <div class="work-thumb"><img src="images/portfolio/Insomnia-front.jpg" alt="Insomnia article" loading="lazy"></div>
+               <div class="work-body"><h3>Insomnia</h3><span class="work-tag">Blog Writing</span></div>
+            </article>
+         </div>
+      </div>
+   </section>
+
+   <!-- shared modal -->
+   <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-card">
+         <button class="modal-close" data-close aria-label="Close">&times;</button>
+         <img class="modal-img" src="" alt="">
+         <div class="modal-body">
+            <h3 class="modal-title"></h3>
+            <p class="modal-desc"></p>
+            <span class="modal-cat"></span><br>
+            <a class="modal-link btn btn-primary" target="_blank" rel="noopener">View Project</a>
+         </div>
+      </div>
    </div>
 
-   <div class="col-six tab-full">
-       <div class="copyright">
-             <span>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a  target="_blank"> Henry.</a></span>          	
-          </div>		                  
-       </div>
+   <!-- footer -->
+   <footer class="site-footer">
+      <div class="container footer-inner">
+         <p>&copy; <script>document.write(new Date().getFullYear());</script> Henry Imoh. All rights reserved.</p>
+         <ul class="footer-social">
+            <li><a href="https://github.com/imohenry" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+            <li><a href="https://twitter.com/i_am_imoh" aria-label="Twitter"><svg class="icon" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/henry-imoh-5472171a1" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></li>
+            <li><a href="http://www.instagram.com/imohenry" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+         </ul>
+      </div>
+   </footer>
 
-       <div id="go-top">
-          <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-       </div>
+   <button id="to-top" aria-label="Back to top">↑</button>
 
-   </div> <!-- /row -->     	
-</footer>  
-
-<div id="preloader"> 
- <div id="loader"></div>
-</div> 
-
-<!-- JavaScript
-================================================== --> 
-<script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-
+   <script src="js/modern.js"></script>
 </body>
-
 </html>
