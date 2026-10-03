@@ -10,8 +10,9 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/modern.css">
+   <link rel="stylesheet" href="css/playful.css">
    <link rel="icon" type="image/png" href="favicon.png">
 
    <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -24,17 +25,16 @@
    </script>
 </head>
 
-<body id="top">
+<body id="top" class="photography-page">
 
    <header class="site-header">
       <div class="container nav-bar">
-         <a class="brand" href="index.html">HENRY<span>.</span></a>
-         <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
-         <ul class="nav-links">
+         <a class="brand" href="index.html">Henry Imoh<span>.</span></a>
+         <button class="nav-toggle" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+         <ul class="nav-links" id="site-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#resume">Resume</a></li>
-            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#work">Experience</a></li>
             <li><a href="Portfolio.html">Portfolio</a></li>
             <li><a href="photography.html" class="active">Photography</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -44,8 +44,14 @@
 
    <section class="page-hero">
       <div class="container">
-         <p class="eyebrow" style="justify-content:center;">Photography</p>
-         <h1>The world through the <span class="grad-text">lens of my camera</span>.</h1>
+         <p class="eyebrow">Photography</p>
+         <h1>Small worlds, <span class="grad-text">held still.</span></h1>
+         <p>Cats, coastlines and the moments that made me stop walking and reach for a camera.</p>
+         <div class="hero-stickers" aria-hidden="true">
+            <span>Wildlife-ish</span>
+            <span>Made in Lagos</span>
+            <span>Click to zoom</span>
+         </div>
       </div>
    </section>
 
@@ -98,13 +104,13 @@
    </section>
 
    <!-- lightbox modal -->
-   <div class="modal" id="modal" aria-hidden="true">
+   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
       <div class="modal-backdrop" data-close></div>
       <div class="modal-card">
          <button class="modal-close" data-close aria-label="Close">&times;</button>
          <img class="modal-img" src="" alt="">
          <div class="modal-body">
-            <h3 class="modal-title"></h3>
+            <h3 class="modal-title" id="modal-title"></h3>
             <p class="modal-desc"></p>
             <span class="modal-cat"></span>
             <a class="modal-link btn btn-primary" target="_blank" rel="noopener" style="display:none;">View</a>
