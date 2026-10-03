@@ -126,11 +126,13 @@
   var navToggle = document.querySelector(".nav-toggle");
   if (navToggle) {
     navToggle.addEventListener("click", function () {
-      document.body.classList.toggle("nav-open");
+      var open = document.body.classList.toggle("nav-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
     document.querySelectorAll(".nav-links a").forEach(function (a) {
       a.addEventListener("click", function () {
         document.body.classList.remove("nav-open");
+        navToggle.setAttribute("aria-expanded", "false");
       });
     });
   }
@@ -218,12 +220,13 @@
 
   /* portfolio filters */
   var filterBtns = document.querySelectorAll(".filters button");
+  var projectGrid = document.querySelector("#portfolio .work-grid");
   filterBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
       filterBtns.forEach(function (b) { b.classList.remove("active"); });
       btn.classList.add("active");
       var f = btn.dataset.filter;
-      document.querySelectorAll(".work-card").forEach(function (card) {
+      (projectGrid ? projectGrid.querySelectorAll(".work-card") : []).forEach(function (card) {
         card.classList.toggle("hidden", f !== "all" && card.dataset.cat !== f);
       });
     });
@@ -232,6 +235,7 @@
   /* shared modal (portfolio + photography) */
   var modal = document.getElementById("modal");
   if (modal) {
+    var lastFocused = null;
     var mImg = modal.querySelector(".modal-img");
     var mTitle = modal.querySelector(".modal-title");
     var mDesc = modal.querySelector(".modal-desc");
@@ -239,6 +243,7 @@
     var mLink = modal.querySelector(".modal-link");
 
     function openModal(d) {
+      lastFocused = document.activeElement;
       mImg.src = d.img || "";
       mImg.alt = d.title || "";
       mTitle.textContent = d.title || "";
@@ -253,16 +258,28 @@
         }
       }
       modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
+      modal.querySelector(".modal-close").focus();
     }
     function closeModal() {
       modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
+      if (lastFocused) lastFocused.focus();
     }
 
     document.querySelectorAll("[data-modal]").forEach(function (card) {
+      card.tabIndex = 0;
+      card.setAttribute("role", "button");
       card.addEventListener("click", function () {
         openModal(card.dataset);
+      });
+      card.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openModal(card.dataset);
+        }
       });
     });
     modal.querySelectorAll("[data-close]").forEach(function (el) {

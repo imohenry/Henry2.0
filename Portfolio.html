@@ -10,8 +10,9 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/modern.css">
+   <link rel="stylesheet" href="css/playful.css">
    <link rel="icon" type="image/png" href="favicon.png">
 
    <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -24,17 +25,16 @@
    </script>
 </head>
 
-<body id="top">
+<body id="top" class="portfolio-page">
 
    <header class="site-header">
       <div class="container nav-bar">
-         <a class="brand" href="index.html">HENRY<span>.</span></a>
-         <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
-         <ul class="nav-links">
+         <a class="brand" href="index.html">Henry Imoh<span>.</span></a>
+         <button class="nav-toggle" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+         <ul class="nav-links" id="site-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#resume">Resume</a></li>
-            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#work">Experience</a></li>
             <li><a href="Portfolio.html" class="active">Portfolio</a></li>
             <li><a href="photography.html">Photography</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -44,9 +44,14 @@
 
    <section class="page-hero">
       <div class="container">
-         <p class="eyebrow" style="justify-content:center;">Portfolio</p>
-         <h1>Check out some of <span class="grad-text">my work</span>.</h1>
-         <p>Products built with code, some UI design — and my written works below.</p>
+         <p class="eyebrow">Selected work</p>
+         <h1>Things I’ve made <span class="grad-text">work.</span></h1>
+         <p>Products, campaigns and words — engineered to be useful, fast and a little hard to forget.</p>
+         <div class="hero-stickers" aria-hidden="true">
+            <span>20+ launches</span>
+            <span>Code + words</span>
+            <span>Click any card</span>
+         </div>
       </div>
    </section>
 
@@ -61,6 +66,19 @@
          </div>
 
          <div class="work-grid">
+            <article class="work-card featured reveal" data-cat="fullstack" data-modal
+               data-img="images/portfolio/livesportsodds.jpeg" data-title="LiveSportsOdds — real-time odds comparison platform"
+               data-tag="Flagship Fullstack Product · Gamdom" data-link="https://livesportsodds.com/"
+               data-desc="I built LiveSportsOdds at Gamdom: a full-stack platform comparing real-time prices across 70+ bookmakers. It brings live events, match and league pages, market movement, arbitrage tools, betting calculators, an SEO content system and operations tooling into one product. <strong>Built with Next.js, React, TypeScript, PostgreSQL, Kysely and automated data pipelines.</strong>">
+               <div class="work-thumb"><img src="images/portfolio/livesportsodds.jpeg" alt="LiveSportsOdds real-time sports odds comparison platform" loading="eager"></div>
+               <div class="work-body">
+                  <span class="featured-kicker">Flagship build · Gamdom</span>
+                  <h3>LiveSportsOdds</h3>
+                  <p>Real-time odds, 70+ bookmakers, powerful comparison tools and the infrastructure behind them.</p>
+                  <span class="work-tag">Fullstack product engineering</span>
+               </div>
+            </article>
+
             <article class="work-card reveal" data-cat="fullstack" data-modal
                data-img="images/portfolio/hackmamba-img.png" data-title="Hackmamba — Official website"
                data-tag="Fullstack Web Development" data-link="https://hackmamba.io/"
@@ -294,13 +312,13 @@
    </section>
 
    <!-- shared modal -->
-   <div class="modal" id="modal" aria-hidden="true">
+   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
       <div class="modal-backdrop" data-close></div>
       <div class="modal-card">
          <button class="modal-close" data-close aria-label="Close">&times;</button>
          <img class="modal-img" src="" alt="">
          <div class="modal-body">
-            <h3 class="modal-title"></h3>
+            <h3 class="modal-title" id="modal-title"></h3>
             <p class="modal-desc"></p>
             <span class="modal-cat"></span><br>
             <a class="modal-link btn btn-primary" target="_blank" rel="noopener">View Project</a>

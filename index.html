@@ -1,323 +1,660 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-   <meta charset="utf-8">
-   <title>Henry Imoh — Frontend Engineer &amp; Technical Writer</title>
-   <meta name="description" content="Imoh Henry's Portfolio website home page">
-   <meta name="author" content="Henry Imoh">
-   <meta name="keywords" content="Portfolio, web developer, Henry Imoh, frontend engineer, full stack developer, HTML, CSS, JavaScript developer, technical writer, HTML email developer, hire">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Henry Imoh, frontend engineer, technical writer and email developer</title>
+<meta name="description" content="Henry Imoh builds websites, writes about how they work, and makes HTML emails that survive Outlook. Based in Lagos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root{
+  --cobalt:#2C46E8; --cobalt-deep:#1F33B8;
+  --paper:#F3F4F8; --card:#FFFFFF; --ink:#1C1D26; --mute:#5B5E70; --line:#D9DCE6;
+  --sun:#FFC83D; --pink:#FF9AC8; --mint:#4FD1A1; --sky:#9EC5FF;
+  --display:"Unbounded", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", Roboto, Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#14151C;--card:#1E2029;--ink:#ECEDF3;--mute:#A3A6B8;--line:#30323F;--cobalt:#3550F0}
+}
+:root[data-theme="dark"]{--paper:#14151C;--card:#1E2029;--ink:#ECEDF3;--mute:#A3A6B8;--line:#30323F;--cobalt:#3550F0}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1180px,100%);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/modern.css">
-   <link rel="icon" type="image/png" href="favicon.png">
+/* ---------- hero: the toy ---------- */
+.hero{position:relative;background:var(--cobalt);color:#fff;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.25rem}
+.logo{font:800 1rem var(--display);text-decoration:none;letter-spacing:-.01em}
+.bar nav{display:flex;gap:1.5rem;font-weight:700}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.headline{padding-top:clamp(1.5rem,6vh,4rem);position:relative;z-index:1;pointer-events:none}
+.headline h1{font:800 clamp(2.75rem,8.5vw,7.5rem)/.95 var(--display);letter-spacing:-.035em;margin:0;max-width:11ch}
+.headline p{font-size:clamp(1.15rem,1.8vw,1.45rem);line-height:1.45;max-width:36ch;margin:1.25rem 0 0;color:#E4E8FF}
+.stage{position:relative;flex:1;min-height:300px}
+.tile{position:absolute;left:0;top:0;display:inline-flex;align-items:center;gap:.5rem;padding:1rem 1.5rem;font:700 clamp(1rem,1.7vw,1.45rem)/1 var(--display);letter-spacing:-.01em;color:var(--ink);background:#fff;border-radius:14px;box-shadow:0 3px 0 rgba(10,16,70,.35);cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;white-space:nowrap;will-change:transform}
+.tile.grab{cursor:grabbing;box-shadow:0 14px 24px rgba(10,16,70,.35)}
+.tile.big{font-size:clamp(1.3rem,3vw,2.6rem);padding:1.2rem 1.9rem;border-radius:20px}
+.tile.pill{border-radius:999px}
+.t-sun{background:var(--sun)}.t-pink{background:var(--pink)}.t-mint{background:var(--mint)}.t-sky{background:var(--sky)}
+.t-ink{background:#1C1D26;color:#fff}
+.tile small{font:400 .8em var(--body)}
+.stage-controls{display:flex;justify-content:flex-end;gap:1rem;align-items:center;padding:1rem 0 1.5rem;border-top:2px solid rgba(255,255,255,.35);font-size:.95rem;color:#E4E8FF}
+.stage-wrap{position:relative;flex:1;display:flex;flex-direction:column}
+.reset{font:700 .9rem var(--body);background:transparent;color:#fff;border:2px solid #fff;border-radius:999px;padding:.5rem 1rem;cursor:pointer}
+.reset:hover{background:#fff;color:var(--cobalt)}
 
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPTL20MDY4"></script>
-   <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-     gtag('config', 'G-VPTL20MDY4');
-   </script>
+/* ---------- sections ---------- */
+section{padding:clamp(4rem,9vw,7rem) 0}
+h2{font:800 clamp(2rem,4.5vw,3.5rem)/1.02 var(--display);letter-spacing:-.03em;margin:0 0 1rem;max-width:18ch}
+.sub{color:var(--mute);font-size:1.15rem;max-width:52ch;margin:0 0 2.5rem}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,6vw,5rem);align-items:center}
+.about p{max-width:60ch}
+.about .big{font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.4;font-weight:700}
+.photo{position:relative}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;background:var(--line)}
+.photo .badge{position:absolute;left:-1rem;bottom:1.5rem;background:var(--sun);color:#1C1D26;font:700 .95rem/1.3 var(--display);padding:.8rem 1rem;border-radius:14px;transform:rotate(-4deg);max-width:13rem}
+.links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-block;font:700 1rem var(--body);text-decoration:none;padding:.8rem 1.3rem;border-radius:999px;border:2px solid var(--ink)}
+.btn.fill{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+
+/* ---------- inbox ---------- */
+.mailapp{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(20,25,80,.35)}
+.chrome{display:flex;align-items:center;gap:.5rem;padding:.8rem 1rem;border-bottom:1px solid var(--line)}
+.chrome i{width:12px;height:12px;border-radius:50%;background:var(--line);display:block}
+.chrome i:nth-child(1){background:#FF6159}.chrome i:nth-child(2){background:#FFBD2E}.chrome i:nth-child(3){background:#28C941}
+.chrome b{margin-left:.75rem;font-size:.95rem}
+.mailbody{display:grid;grid-template-columns:minmax(16rem,22rem) minmax(0,1fr);min-height:32rem}
+.list{border-right:1px solid var(--line);margin:0;padding:0;list-style:none}
+.msg{display:grid;grid-template-columns:auto 1fr;gap:.25rem .75rem;width:100%;text-align:left;font:inherit;color:inherit;background:none;border:0;border-bottom:1px solid var(--line);padding:1rem 1.1rem;cursor:pointer;position:relative}
+.msg:hover{background:color-mix(in srgb,var(--cobalt) 6%,transparent)}
+.msg[aria-selected="true"]{background:color-mix(in srgb,var(--cobalt) 12%,transparent);box-shadow:inset 4px 0 0 var(--cobalt)}
+.av{grid-row:span 3;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:800 .8rem var(--display);color:#1C1D26}
+.msg .from{font-weight:700;display:flex;justify-content:space-between;gap:.5rem}
+.msg .from span{font-weight:400;color:var(--mute);font-size:.85rem}
+.msg .subj{font-size:.95rem}
+.msg .prev{padding-right:1.1rem;font-size:.88rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.msg.unread .subj{font-weight:700}
+.msg.unread::after{content:"";position:absolute;right:1.1rem;bottom:1.15rem;width:9px;height:9px;border-radius:50%;background:var(--cobalt)}
+.pane{padding:clamp(1.25rem,3vw,2.5rem)}
+.pane article[hidden]{display:none}
+.pane h3{font:700 clamp(1.3rem,2.2vw,1.75rem)/1.2 var(--display);letter-spacing:-.02em;margin:0 0 1rem}
+.meta{display:flex;align-items:center;gap:.75rem;padding-bottom:1.25rem;margin-bottom:1.25rem;border-bottom:1px solid var(--line);font-size:.95rem}
+.meta .av{grid-row:auto}
+.meta div span{display:block;color:var(--mute);font-size:.88rem}
+.pane ul{padding-left:1.15rem;max-width:62ch}
+.pane li{margin-bottom:.5rem}
+.attach{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;padding-top:1.25rem;border-top:1px dashed var(--line)}
+.attach span{font-size:.85rem;padding:.35rem .75rem;border:1px solid var(--line);border-radius:8px}
+.attach strong{width:100%;font-size:.85rem;color:var(--mute);font-weight:400}
+
+/* ---------- compose ---------- */
+.compose{max-width:760px;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(20,25,80,.35)}
+.compose .chrome{background:var(--ink);color:var(--paper);border:0}
+.field{display:grid;grid-template-columns:5.5rem 1fr;align-items:center;border-bottom:1px solid var(--line);padding:0 1.25rem}
+.field label{color:var(--mute);font-size:.95rem}
+.field input,.field output{font:inherit;color:var(--ink);background:transparent;border:0;padding:.95rem 0;width:100%;outline:none}
+.field:focus-within{box-shadow:inset 3px 0 0 var(--cobalt)}
+.topics{display:flex;flex-wrap:wrap;gap:.5rem;padding:1rem 1.25rem;border-bottom:1px solid var(--line)}
+.topics b{width:100%;font-weight:400;color:var(--mute);font-size:.9rem}
+.chip{font:700 .9rem var(--body);color:var(--ink);background:transparent;border:2px solid var(--line);border-radius:999px;padding:.45rem .9rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--sun);border-color:var(--sun);color:#1C1D26}
+textarea{display:block;width:100%;min-height:11rem;font:inherit;color:var(--ink);background:transparent;border:0;padding:1.25rem;resize:vertical;outline:none}
+.send{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:1rem 1.25rem;border-top:1px solid var(--line)}
+.send button{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-width:9.5rem;font:700 1rem var(--body);background:var(--cobalt);color:#fff;border:0;border-radius:999px;padding:.85rem 1.6rem;cursor:pointer;transition:transform .2s ease,background .2s ease,opacity .2s ease}
+.send button:hover{background:var(--cobalt-deep)}
+.send button:active{transform:translateY(1px)}
+.send button:disabled{cursor:wait;opacity:.78}
+.send small{color:var(--mute)}
+.send-spinner{display:none;width:1rem;height:1rem;border:2px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:mail-spin .7s linear infinite}
+.compose.is-sending .send-spinner{display:block}
+.form-status{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:center;margin:1rem 1.25rem 0;padding:.85rem 1rem;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+.form-status[hidden]{display:none}
+.form-status strong,.form-status span{display:block}
+.form-status strong{font-size:.98rem}
+.form-status span{color:var(--mute);font-size:.9rem;line-height:1.4}
+.status-icon{display:grid!important;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--sky);color:#1C1D26!important;font-weight:700}
+.form-status[data-state="success"]{border-color:color-mix(in srgb,var(--mint) 65%,var(--line));background:color-mix(in srgb,var(--mint) 12%,var(--card))}
+.form-status[data-state="success"] .status-icon{background:var(--mint)}
+.form-status[data-state="error"]{border-color:color-mix(in srgb,#ff6159 65%,var(--line));background:color-mix(in srgb,#ff6159 9%,var(--card))}
+.form-status[data-state="error"] .status-icon{background:#ff8b85}
+.bot-field{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@keyframes mail-spin{to{transform:rotate(360deg)}}
+.reach{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;margin-top:2.5rem}
+.reach div span{display:block;color:var(--mute);font-size:.9rem}
+.reach a{font-weight:700;text-decoration:none}
+.reach a:hover{text-decoration:underline}
+
+footer{border-top:1px solid var(--line);padding:2rem 0 2.5rem;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer nav{display:flex;gap:1.25rem}
+
+@media (max-width:820px){
+  .bar nav a.opt{display:none}
+  .about{grid-template-columns:1fr}
+  .photo{max-width:22rem}
+  .photo .badge{left:.75rem}
+  .mailbody{grid-template-columns:1fr}
+  .list{border-right:0;border-bottom:1px solid var(--line)}
+  .stage-controls{justify-content:space-between}
+  .tile.opt{display:none}
+  .tile{padding:.7rem 1rem;font-size:.95rem}
+  .tile.big{font-size:1.2rem;padding:.9rem 1.3rem}
+  .stage{min-height:340px}
+}
+</style>
 </head>
+<body>
 
-<body id="top">
+<header class="hero">
+  <div class="wrap bar">
+    <a class="logo" href="#">Henry Imoh</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a class="opt" href="#about">About</a>
+      <a class="opt" href="Portfolio.html">Portfolio</a>
+      <a class="opt" href="photography.html">Photography</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 
-   <header class="site-header">
-      <div class="container nav-bar">
-         <a class="brand" href="index.html">HENRY<span>.</span></a>
-         <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
-         <ul class="nav-links">
-            <li><a href="#top" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="Portfolio.html">Portfolio</a></li>
-            <li><a href="photography.html">Photography</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
+  <div class="wrap headline">
+    <h1>Hi, I'm Henry.</h1>
+    <p>I build web experiences, write about how they work, and make HTML emails that survive Outlook.</p>
+  </div>
+
+  <div class="wrap stage-wrap">
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="tile big t-sun">React</div>
+      <div class="tile pill">Next.js</div>
+      <div class="tile t-mint">TypeScript</div>
+      <div class="tile opt pill t-pink">Astro</div>
+      <div class="tile t-sky">Tailwind CSS</div>
+      <div class="tile big t-ink">HTML email</div>
+      <div class="tile opt pill t-sun">Node.js</div>
+      <div class="tile opt">Contentful</div>
+      <div class="tile pill t-mint">SEO</div>
+      <div class="tile opt t-pink">Figma</div>
+      <div class="tile big">Lots of articles</div>
+      <div class="tile pill t-sky">6.5 ft tall</div>
+      <div class="tile t-mint">Wildlife photos</div>
+      <div class="tile pill t-pink">Anime</div>
+      <div class="tile t-sun">Lagos</div>
+    </div>
+    <div class="stage-controls">
+      <span>Grab a tile and throw it.</span>
+      <button class="reset" id="reset" type="button">Drop them again</button>
+    </div>
+  </div>
+  <p class="sr">Skills: React, Next.js, TypeScript, Astro, Tailwind CSS, HTML email, Node.js, Contentful, SEO and Figma. I've written more than 150 technical articles, I photograph wildlife, and I'm based in Lagos.</p>
+</header>
+
+<main>
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>Engineer, writer, and the tallest person in most rooms.</h2>
+        <p class="big">Over seven years of shipping interfaces and writing technical articles explaining them.</p>
+        <p>I've built applications and websites on Next.js and Contentful, payment card scheme sites, LMS frontends, a CRM, and more email templates than I can count. I studied History and International Studies at Imo State University, Owerri, which is probably why I enjoy explaining things.</p>
+        <p>Away from the keyboard I photograph wildlife, watch too much anime, and support Manchester United, which builds patience.</p>
+        <div class="links">
+          <a class="btn fill" href="Portfolio.html">See my projects</a>
+          <a class="btn" href="Resume-Henry-Imoh.pdf">Download my CV</a>
+          <a class="btn" href="photography.html">See my photos</a>
+        </div>
       </div>
-   </header>
-
-   <!-- hero -->
-   <section class="hero">
-      <canvas class="hero-canvas" id="heroCanvas"></canvas>
-      <div class="hero-scrim"></div>
-      <div class="container hero-inner">
-         <p class="hero-greeting" data-type='["Hello,","أهلا,","你好,","Hola,","Konnichiwa,","Bonjour,"]'><span class="type-text"></span><span class="cursor">|</span></p>
-         <h1>I am <span class="grad-text">Henry</span>.</h1>
-         <p class="hero-tagline">I build fast, beautiful web products — and tell stories with code, words, and a camera.</p>
-         <div class="hero-roles">
-            <span>Frontend / Web Engineer</span><i class="dot"></i>
-            <span>Technical Writer</span><i class="dot"></i>
-            <span>Email Developer</span>
-         </div>
-         <div class="hero-cta">
-            <a class="btn btn-primary" href="Portfolio.html">View My Work</a>
-            <a class="btn" href="#contact">Get In Touch</a>
-         </div>
+      <div class="photo">
+        <img src="images/profile-head.jpg" alt="Portrait of Henry Imoh" width="600" height="750" loading="lazy">
+        <div class="badge">No, I don't play basketball.</div>
       </div>
-      <a class="hero-scroll" href="#about">Scroll<span></span></a>
-      <ul class="hero-social">
-         <li><a href="https://github.com/imohenry" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
-         <li><a href="https://twitter.com/i_am_imoh" aria-label="Twitter"><svg class="icon" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a></li>
-         <li><a href="https://www.linkedin.com/in/henry-imoh-5472171a1" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></li>
-      </ul>
-   </section>
+    </div>
+  </section>
 
-   <!-- about -->
-   <section id="about">
-      <div class="container">
-         <div class="section-head center reveal">
-            <p class="eyebrow">About</p>
-            <h2>Let me introduce myself.</h2>
-         </div>
+  <section id="work" style="padding-top:0">
+    <div class="wrap">
+      <h2>My career, as an inbox.</h2>
+      <p class="sub">I've spent years building HTML emails, so here's my work history in the format I know best. Open a message to read it.</p>
 
-         <div class="about-grid">
-            <div class="reveal">
-               <div class="about-card">
-                  <div class="about-intro">
-                     <span class="avatar"><img src="images/profile-head.jpg" alt="Henry Imoh"></span>
-                     <div>
-                        <h3>Henry Imoh</h3>
-                        <p>Frontend Engineer &amp; Writer</p>
-                     </div>
-                  </div>
-                  <p>I'm a Frontend Engineer, Technical Content writer, and Email developer with 6+ years shipping <span class="grad-text">fast, beautiful web products</span> and writing content. I'm passionate about photography, impactful content, and clean interfaces — with a side of design, psychology, and data visualization.</p>
-                  <p>Graduate of Imo State University, Owerri. I excel at wildlife photography, love building products that impact lives, and I'm 6.5 ft tall (no, I don't play basketball — and yes, the weather's fine up here). Longtime otaku and a Manchester United fan.</p>
-                  <ul class="info-list">
-                     <li><strong>Fullname</strong><span>Henry Ekene Imoh</span></li>
-                     <li><strong>Birth Date</strong><span>October 30th</span></li>
-                     <li><strong>Career</strong><span>Full-stack Dev &amp; Writer</span></li>
-                     <li><strong>Hobbies</strong><span>Anime, Research, Football</span></li>
-                     <li><strong>Email</strong><span>Henryimoh2@gmail.com</span></li>
-                  </ul>
-               </div>
-            </div>
+      <div class="mailapp">
+        <div class="chrome"><i></i><i></i><i></i><b>Inbox (<span id="unread">8</span> unread)</b></div>
+        <div class="mailbody">
+          <div class="list" role="tablist" aria-label="Work history">
+            <button class="msg" role="tab" id="t7" aria-controls="p7" aria-selected="true">
+              <span class="av" style="background:var(--sun)">GA</span>
+              <span class="from">Gamdom <span>2026–now</span></span>
+              <span class="subj">Senior Web Engineer</span>
+              <span class="prev">High-performance product interfaces, cleaner systems, fewer bugs…</span>
+            </button>
+            <button class="msg unread" role="tab" id="t8" aria-controls="p8" aria-selected="false" tabindex="-1">
+              <span class="av" style="background:var(--pink)">FH</span>
+              <span class="from">Fira Health <span>2025</span></span>
+              <span class="subj">Fullstack Web Developer</span>
+              <span class="prev">Owned the corporate web experience from concept to deployment…</span>
+            </button>
+            <button class="msg unread" role="tab" id="t9" aria-controls="p9" aria-selected="false" tabindex="-1">
+              <span class="av" style="background:var(--mint)">OT</span>
+              <span class="from">Opentape <span>2024–25</span></span>
+              <span class="subj">Product Engineer / HTML Email Developer</span>
+              <span class="prev">Built accessible product UI, motion and cross-client email templates…</span>
+            </button>
+            <button class="msg unread" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1">
+              <span class="av" style="background:var(--sun)">IS</span>
+              <span class="from">Interswitch Group <span>2022–24</span></span>
+              <span class="subj">Senior Frontend Engineer / Animation Specialist</span>
+              <span class="prev">Built the Interswitch blog, cut server response times by 50%…</span>
+            </button>
+            <button class="msg unread" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">
+              <span class="av" style="background:var(--pink)">HM</span>
+              <span class="from">Hackmamba <span>2020–22</span></span>
+              <span class="subj">Technical Writer</span>
+              <span class="prev">150+ articles, whitepapers, user guides and manuals…</span>
+            </button>
+            <button class="msg unread" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">
+              <span class="av" style="background:var(--mint)">SC</span>
+              <span class="from">Shecooks.ng <span>2019–22</span></span>
+              <span class="subj">Frontend Web Developer</span>
+              <span class="prev">Rebuilt the site in React, grew meal sales by 45%…</span>
+            </button>
+            <button class="msg unread" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">
+              <span class="av" style="background:var(--sky)">GW</span>
+              <span class="from">Get2work <span>2018–21</span></span>
+              <span class="subj">Frontend Engineer and Email Developer</span>
+              <span class="prev">Shipped a CRM that drove a 40% revenue increase…</span>
+            </button>
+            <button class="msg unread" role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1">
+              <span class="av" style="background:var(--line)">EE</span>
+              <span class="from">Easyerrands <span>2018–19</span></span>
+              <span class="subj">Frontend Web Developer</span>
+              <span class="prev">Responsive layouts and a secure PHP back end…</span>
+            </button>
+            <button class="msg unread" role="tab" id="t6" aria-controls="p6" aria-selected="false" tabindex="-1">
+              <span class="av" style="background:var(--sun)">IM</span>
+              <span class="from">Imo State University <span>2016–20</span></span>
+              <span class="subj">BA, History and International Studies</span>
+              <span class="prev">Graduated with a GPA of 3.66…</span>
+            </button>
+          </div>
 
-            <div class="reveal" style="--d:.15s">
-               <ul class="skills">
-                  <li><div class="skill-top"><span>HTML5 &amp; CSS3</span><em>100%</em></div><div class="bar"><i data-level="100"></i></div></li>
-                  <li><div class="skill-top"><span>Tailwind CSS</span><em>98%</em></div><div class="bar"><i data-level="98"></i></div></li>
-                  <li><div class="skill-top"><span>JavaScript</span><em>95%</em></div><div class="bar"><i data-level="95"></i></div></li>
-                  <li><div class="skill-top"><span>Astro.js</span><em>95%</em></div><div class="bar"><i data-level="95"></i></div></li>
-                  <li><div class="skill-top"><span>HTML Email Development</span><em>95%</em></div><div class="bar"><i data-level="95"></i></div></li>
-                  <li><div class="skill-top"><span>React.js</span><em>94%</em></div><div class="bar"><i data-level="94"></i></div></li>
-                  <li><div class="skill-top"><span>TypeScript</span><em>90%</em></div><div class="bar"><i data-level="90"></i></div></li>
-                  <li class="more-skill"><div class="skill-top"><span>Next.js</span><em>85%</em></div><div class="bar"><i data-level="85"></i></div></li>
-                  <li class="more-skill"><div class="skill-top"><span>SASS &amp; Bootstrap</span><em>85%</em></div><div class="bar"><i data-level="85"></i></div></li>
-                  <li class="more-skill"><div class="skill-top"><span>Contentful CMS</span><em>85%</em></div><div class="bar"><i data-level="85"></i></div></li>
-                  <li class="more-skill"><div class="skill-top"><span>SEO</span><em>85%</em></div><div class="bar"><i data-level="85"></i></div></li>
-                  <li class="more-skill"><div class="skill-top"><span>Node.js</span><em>80%</em></div><div class="bar"><i data-level="80"></i></div></li>
-                  <li class="more-skill"><div class="skill-top"><span>Copy / Technical Writing</span><em>70%</em></div><div class="bar"><i data-level="70"></i></div></li>
-               </ul>
-               <button class="skills-toggle" type="button" aria-expanded="false">See more skills</button>
-            </div>
-         </div>
-
-         <div class="tech-marquee reveal">
-            <div class="tech-track">
-               <span>React</span><span>Next.js</span><span>TypeScript</span><span>Astro</span><span>Tailwind CSS</span><span>Node.js</span><span>SASS</span><span>Contentful</span><span>HTML Email</span><span>SEO</span><span>Figma</span>
-               <span>React</span><span>Next.js</span><span>TypeScript</span><span>Astro</span><span>Tailwind CSS</span><span>Node.js</span><span>SASS</span><span>Contentful</span><span>HTML Email</span><span>SEO</span><span>Figma</span>
-            </div>
-         </div>
-
-         <div class="about-cta reveal">
-            <a class="btn btn-primary" href="Resume-Henry-Imoh.pdf" download="Henry Resume">Download CV</a>
-            <a class="btn" href="#contact">Hire Me</a>
-            <a class="btn" href="Portfolio.html">My Portfolio</a>
-         </div>
+          <div class="pane">
+            <article role="tabpanel" id="p7" aria-labelledby="t7">
+              <h3>Senior Web Engineer</h3>
+              <div class="meta"><span class="av" style="background:var(--sun)">GA</span><div><strong>Gamdom</strong><span>to Henry, January 2026 to present</span></div></div>
+              <ul>
+                <li>Built <a href="https://livesportsodds.com/" target="_blank" rel="noopener">LiveSportsOdds</a>, a full-stack real-time odds comparison platform covering 70+ bookmakers, live events, market movement and betting tools.</li>
+                <li>Partner with cross-functional teams to build responsive, high-performance interfaces.</li>
+                <li>Write clean, scalable and maintainable code grounded in solid engineering standards.</li>
+                <li>Find and resolve bugs and performance issues to keep the product experience seamless.</li>
+              </ul>
+              <div class="attach"><strong>Tools used</strong><span>Next.js</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Data pipelines</span></div>
+            </article>
+            <article role="tabpanel" id="p8" aria-labelledby="t8" hidden>
+              <h3>Fullstack Web Developer</h3>
+              <div class="meta"><span class="av" style="background:var(--pink)">FH</span><div><strong>Fira Health</strong><span>to Henry, July 2025 to December 2025</span></div></div>
+              <ul>
+                <li>Owned the corporate web experience from early concept and design collaboration through deployment and maintenance.</li>
+                <li>Worked with developers and designers in Figma to improve the UI/UX and shape product ideas.</li>
+                <li>Added CSS and JavaScript animation that made interactions clearer and more engaging.</li>
+                <li>Refactored code and build tooling to reduce load times, then guided migration toward a more scalable architecture with real-time features.</li>
+              </ul>
+              <div class="attach"><strong>Tools used</strong><span>Fullstack development</span><span>Figma</span><span>CSS/JS animation</span><span>Build tools</span></div>
+            </article>
+            <article role="tabpanel" id="p9" aria-labelledby="t9" hidden>
+              <h3>Product Engineer / HTML Email Developer</h3>
+              <div class="meta"><span class="av" style="background:var(--mint)">OT</span><div><strong>Opentape</strong><span>to Henry, August 2024 to July 2025</span></div></div>
+              <ul>
+                <li>Crafted responsive, accessible interfaces with Tailwind CSS, JSX and Next.js.</li>
+                <li>Built and customised HTML email templates that work reliably across clients.</li>
+                <li>Used GSAP and CSS/JavaScript motion to create a more expressive product interface.</li>
+                <li>Designed features with cross-functional teams, integrated APIs and improved data-handling performance.</li>
+              </ul>
+              <div class="attach"><strong>Tools used</strong><span>Next.js</span><span>React</span><span>Tailwind CSS</span><span>GSAP</span><span>HTML email</span></div>
+            </article>
+            <article role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+              <h3>Senior Frontend Engineer / Markup and Animation Specialist</h3>
+              <div class="meta"><span class="av" style="background:var(--sun)">IS</span><div><strong>Interswitch Group</strong><span>to Henry, July 2022 to September 2024</span></div></div>
+              <ul>
+                <li>Built the Interswitch blog with Next.js and the Contentful headless CMS.</li>
+                <li>Worked with the back-end team on a caching approach that cut server response times by 50% and improved site speed by 15%.</li>
+                <li>Optimised components across devices and browsers, lifting user engagement by 30% and revenue by 10%.</li>
+                <li>Built an LMS frontend, a high-converting landing page and a full payment card scheme website with Twig.</li>
+                <li>Created responsive Webflow sites, and designed HTML email templates and newsletters for marketing.</li>
+              </ul>
+              <div class="attach"><strong>Tools used</strong><span>Next.js</span><span>TypeScript</span><span>Contentful</span><span>Twig</span><span>Webflow</span><span>Python</span></div>
+            </article>
+            <article role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+              <h3>Technical Writer</h3>
+              <div class="meta"><span class="av" style="background:var(--pink)">HM</span><div><strong>Hackmamba</strong><span>to Henry, August 2020 to December 2022</span></div></div>
+              <ul>
+                <li>Wrote more than 150 technical articles, whitepapers, user guides and manuals on software engineering and product features.</li>
+                <li>Built templates and checklists that shortened production time and helped teams learn new technologies.</li>
+                <li>Turned complex technical concepts into plain language for users.</li>
+                <li>Designed HTML email templates and newsletters for marketing.</li>
+              </ul>
+              <div class="attach"><strong>Tools used</strong><span>Technical writing</span><span>Documentation</span><span>HTML email</span></div>
+            </article>
+            <article role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+              <h3>Frontend Web Developer</h3>
+              <div class="meta"><span class="av" style="background:var(--mint)">SC</span><div><strong>Shecooks.ng</strong><span>to Henry, September 2019 to January 2022</span></div></div>
+              <ul>
+                <li>Rebuilt the company website in React with a mobile-first approach.</li>
+                <li>Used customer personas and SEO to grow meal sales by 45%.</li>
+                <li>Built a scalable PHP back end focused on security and efficiency, and helped the team move from waterfall to Agile.</li>
+              </ul>
+              <div class="attach"><strong>Tools used</strong><span>React</span><span>PHP</span><span>SEO</span></div>
+            </article>
+            <article role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+              <h3>Frontend Engineer and Email Developer</h3>
+              <div class="meta"><span class="av" style="background:var(--sky)">GW</span><div><strong>Get2work</strong><span>to Henry, August 2018 to May 2021</span></div></div>
+              <ul>
+                <li>Delivered a CRM that improved customer acquisition and retention by 20%, contributing to a 40% revenue increase.</li>
+                <li>Created reusable code libraries that halved development time on later projects.</li>
+                <li>Built and maintained REST APIs for third-party integrations, improving efficiency by 30%.</li>
+                <li>Set up analytics, SEO keyword research and HTML email templates for marketing.</li>
+              </ul>
+              <div class="attach"><strong>Tools used</strong><span>JavaScript</span><span>jQuery</span><span>REST APIs</span><span>HTML email</span></div>
+            </article>
+            <article role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+              <h3>Frontend Web Developer</h3>
+              <div class="meta"><span class="av" style="background:var(--line)">EE</span><div><strong>Easyerrands</strong><span>to Henry, June 2018 to November 2019</span></div></div>
+              <ul>
+                <li>Built responsive web layouts.</li>
+                <li>Built the company's back end in PHP with a focus on security and efficiency.</li>
+              </ul>
+              <div class="attach"><strong>Tools used</strong><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
+            </article>
+            <article role="tabpanel" id="p6" aria-labelledby="t6" hidden>
+              <h3>BA, History and International Studies</h3>
+              <div class="meta"><span class="av" style="background:var(--sun)">IM</span><div><strong>Imo State University, Owerri</strong><span>to Henry, September 2016 to September 2020</span></div></div>
+              <ul>
+                <li>Graduated with a GPA of 3.66.</li>
+                <li>Learned to research carefully and explain clearly, which turned out to be most of technical writing.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </div>
-   </section>
+    </div>
+  </section>
 
-   <!-- resume -->
-   <section id="resume" style="background: var(--bg-alt);">
-      <div class="container">
-         <div class="section-head center reveal">
-            <p class="eyebrow">Resume</p>
-            <h2>More of my credentials.</h2>
-            <p>My work experience and educational background in detail.</p>
-         </div>
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <h2>Your turn to send one.</h2>
+      <p class="sub">Pick what you need help with and write me a note. It lands straight in my inbox.</p>
 
-         <div class="resume-block">
-            <h2 class="grad-text reveal">Work Experience</h2>
-            <div class="timeline">
-               <div class="timeline-item reveal">
-                  <h3>Frontend Engineer</h3>
-                  <div class="timeline-meta"><strong>Interswitch Group</strong><time>July 2022 — September 2024</time></div>
-                  <ul>
-                     <li>Built the Interswitch Blog using Next.js, Contentful Headless CMS and more.</li>
-                     <li>Used Twig templating to build the frontend of an LMS and a high-converting landing page, plus a full payment card scheme website with a blog and multiple pages.</li>
-                     <li>Created dynamic, responsive Webflow websites meeting project and organizational needs.</li>
-                     <li>Used TypeScript across blogs, pages, and applications for type-safety and error-catching.</li>
-                     <li>Modified the client-side web architecture to provide dependable SPAs; collaborated with the back-end team on a caching technique that cut server response times by 50% and increased site speed by 15%.</li>
-                     <li>Optimized components across devices and browsers — 30% increase in user engagement and 10% increase in revenue.</li>
-                     <li>Designed HTML email templates and newsletters for marketing; built email and web solutions using Python.</li>
-                  </ul>
-               </div>
-               <div class="timeline-item reveal">
-                  <h3>Technical Writer</h3>
-                  <div class="timeline-meta"><strong>Hackmamba</strong><time>Aug 2020 — Dec 2022</time></div>
-                  <ul>
-                     <li>Authored 150+ technical articles, whitepapers, user guides and manuals covering software engineering and product features.</li>
-                     <li>Developed templates and checklists that reduced production time and helped teams train on new technologies efficiently.</li>
-                     <li>Transformed complex technical concepts into simplified language for users.</li>
-                     <li>Designed and implemented HTML email templates and newsletters for marketing initiatives.</li>
-                  </ul>
-               </div>
-               <div class="timeline-item reveal">
-                  <h3>Frontend Engineer &amp; Email Developer</h3>
-                  <div class="timeline-meta"><strong>Get2work</strong><time>August 2018 — May 2021</time></div>
-                  <ul>
-                     <li>Delivered a fully functional CRM system that improved customer acquisition and retention by 20%, driving a 40% revenue increase.</li>
-                     <li>Created reusable code libraries, cutting development time for future projects by 50%.</li>
-                     <li>Integrated frontend with back-end services using jQuery and AJAX for real-time, data-driven updates.</li>
-                     <li>Developed and maintained RESTful APIs enabling seamless third-party communication — 30% efficiency increase.</li>
-                     <li>Implemented analytics, SEO keyword research, and HTML email templates for marketing.</li>
-                  </ul>
-               </div>
-               <div class="timeline-item reveal">
-                  <h3>Front-end Web Developer</h3>
-                  <div class="timeline-meta"><strong>Shecooks.ng</strong><time>Sep 2019 — Jan 2022</time></div>
-                  <ul>
-                     <li>Used React to create a robust, maintainable codebase and applied a mobile-first strategy in revamping the company's website.</li>
-                     <li>Built modular, responsive layouts with contemporary CSS and JavaScript frameworks.</li>
-                     <li>Built a scalable PHP back-end focused on integrity, security, and efficiency.</li>
-                     <li>Used customer personas and SEO tactics to drive meal sales up 45%; assisted the shift from waterfall to Agile.</li>
-                  </ul>
-               </div>
-               <div class="timeline-item reveal">
-                  <h3>Front-end Web Developer</h3>
-                  <div class="timeline-meta"><strong>Easyerrands</strong><time>June 2018 — November 2019</time></div>
-                  <ul>
-                     <li>Built responsive web layouts using frontend technologies.</li>
-                     <li>Built a sturdy company backend architecture with PHP, focusing on security and efficiency.</li>
-                  </ul>
-               </div>
-            </div>
-         </div>
+      <form class="compose" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <div class="chrome"><b style="margin:0">New message</b></div>
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="projectType" id="f-topic" value="">
+        <p class="bot-field" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="field"><label>To</label><output>Henry Imoh</output></div>
+        <div class="field"><label for="f-name">From</label><input id="f-name" name="name" placeholder="Your name" autocomplete="name" required></div>
+        <div class="field"><label for="f-email">Reply to</label><input id="f-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+        <div class="topics" role="group" aria-label="What do you need help with?">
+          <b>I need help with</b>
+          <button type="button" class="chip" aria-pressed="false">A website or web app</button>
+          <button type="button" class="chip" aria-pressed="false">Technical writing</button>
+          <button type="button" class="chip" aria-pressed="false">HTML emails</button>
+          <button type="button" class="chip" aria-pressed="false">Something else</button>
+        </div>
+        <div class="field"><label for="f-subj">Subject</label><input id="f-subj" name="subject" placeholder="Hello Henry"></div>
+        <label class="sr" for="f-msg">Message</label>
+        <textarea id="f-msg" name="message" placeholder="Tell me a bit about the project, the timeline, and where to find you." required></textarea>
+        <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden>
+          <span class="status-icon" aria-hidden="true">→</span>
+          <div><strong id="status-title"></strong><span id="status-copy"></span></div>
+        </div>
+        <div class="send"><small>I usually reply within two working days.</small><button type="submit"><span class="send-label">Send message</span><span class="send-spinner" aria-hidden="true"></span></button></div>
+      </form>
 
-         <div class="resume-block">
-            <h2 class="grad-text reveal">Education</h2>
-            <div class="timeline">
-               <div class="timeline-item reveal">
-                  <h3>Bachelors Degree</h3>
-                  <div class="timeline-meta"><strong>Imo State University, Owerri</strong><time>September 2016 — September 2020</time></div>
-                  <ul>
-                     <li>B.A in History and International Studies — GPA: 3.66.</li>
-                  </ul>
-               </div>
-               <div class="timeline-item reveal">
-                  <h3>High School</h3>
-                  <div class="timeline-meta"><strong>Kings High School</strong><time>September 2009 — July 2014</time></div>
-                  <ul>
-                     <li>Graduated high school with excellent O level results.</li>
-                  </ul>
-               </div>
-            </div>
-         </div>
+      <div class="reach">
+        <div><span>Email</span><a href="mailto:Henryimoh2@gmail.com">Henryimoh2@gmail.com</a></div>
+        <div><span>Phone</span><a href="tel:+2348135335812">+234 813 533 5812</a></div>
+        <div><span>Based in</span><strong>Lagos, Nigeria</strong></div>
       </div>
-   </section>
+    </div>
+  </section>
+</main>
 
-   <!-- services -->
-   <section id="services">
-      <div class="container">
-         <div class="section-head center reveal">
-            <p class="eyebrow">Services</p>
-            <h2>What can I do for you?</h2>
-         </div>
-         <div class="cards-grid">
-            <div class="service-card reveal">
-               <div class="glyph">💻</div>
-               <h3>Web Development</h3>
-               <p>I work with JavaScript libraries like React.js and Vue.js, offering the best value for your money with an all-round package (frontend and backend), plus analytics and data visualization tooling.</p>
-            </div>
-            <div class="service-card reveal" style="--d:.1s">
-               <div class="glyph">✍️</div>
-               <h3>Writing</h3>
-               <p>A generalist in the writing field — copywriting, blog writing, SEO writing, technical writing, content writing, and even academic writing. Adaptable to any situation.</p>
-            </div>
-            <div class="service-card reveal" style="--d:.2s">
-               <div class="glyph">🎨</div>
-               <h3>UI/UX Design</h3>
-               <p>I work with Figma and Canva to create designs. Although my design skills aren't the flashiest, I always give my 100%.</p>
-            </div>
-            <div class="service-card reveal" style="--d:.3s">
-               <div class="glyph">💬</div>
-               <h3>Therapy</h3>
-               <p>I'm not a registered therapist yet, but I'm working towards it — and I've gained valuable experience in the field over the years. Do come forward with your issues.</p>
-            </div>
-         </div>
-      </div>
-   </section>
+<footer>
+  <div class="wrap">
+    <span>© Henry Imoh</span>
+    <nav aria-label="Social">
+      <a href="https://github.com/imohenry">GitHub</a>
+      <a href="https://twitter.com/i_am_imoh">X</a>
+      <a href="https://www.linkedin.com/in/henry-imoh-5472171a1">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
 
-   <!-- stats -->
-   <div class="stats-band">
-      <div class="container stats-row">
-         <div class="stat reveal"><strong data-count="30">0</strong><span>Happy Clients</span></div>
-         <div class="stat reveal" style="--d:.08s"><strong data-count="2">0</strong><span>Awards Received</span></div>
-         <div class="stat reveal" style="--d:.16s"><strong data-count="120">0</strong><span>Crazy Ideas</span></div>
-         <div class="stat reveal" style="--d:.24s"><strong data-count="40">0</strong><span>Coffee Cups</span></div>
-         <div class="stat reveal" style="--d:.32s"><strong data-count="15057">0</strong><span>Hours</span></div>
-      </div>
-   </div>
+<script>
+/* ---------- tile physics ---------- */
+(function(){
+  var stage = document.getElementById('stage');
+  var els = Array.prototype.slice.call(stage.querySelectorAll('.tile')).filter(function(el){ return el.offsetParent !== null; });
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W = 0, H = 0, top = 0, bodies = [], drag = null, still = 0, running = false;
+  var G = 0.55;
 
-   <!-- contact -->
-   <section id="contact">
-      <div class="container">
-         <div class="section-head center reveal">
-            <p class="eyebrow">Contact</p>
-            <h2>I'd love to hear from you.</h2>
-         </div>
+  function measure(){
+    W = stage.clientWidth; H = stage.clientHeight;
+    top = -stage.offsetTop + 10;
+    bodies.forEach(function(b){ b.w = b.el.offsetWidth; b.h = b.el.offsetHeight; });
+  }
 
-         <div class="contact-wrap reveal">
-            <form name="contactForm" id="contactForm" data-netlify="true" method="post" action="inc/sendEmail.php">
-               <div class="form-grid">
-                  <input name="contactName" type="text" placeholder="Name" minlength="2" required>
-                  <input name="contactEmail" type="email" placeholder="Email" required>
-                  <input name="contactSubject" type="text" placeholder="Subject" class="full">
-                  <textarea name="contactMessage" placeholder="Message" class="full" required></textarea>
-               </div>
-               <button class="btn btn-primary" type="submit">Send Message</button>
-            </form>
+  function scatter(){
+    bodies.forEach(function(b, i){
+      b.x = Math.random() * Math.max(1, W - b.w);
+      b.y = top - b.h - i * 70 - Math.random() * 60;
+      b.vx = (Math.random() - .5) * 4; b.vy = 0;
+    });
+  }
 
-            <div class="contact-info">
-               <div class="reveal">
-                  <h4>Where to find me</h4>
-                  <p>Lagos, Nigeria</p>
-               </div>
-               <div class="reveal" style="--d:.1s">
-                  <h4>Email me at</h4>
-                  <a href="mailto:Henryimoh2@gmail.com">Henryimoh2@gmail.com</a>
-                  <a href="mailto:Henry_imoh@yahoo.com">Henry_imoh@yahoo.com</a>
-               </div>
-               <div class="reveal" style="--d:.2s">
-                  <h4>Call me at</h4>
-                  <a href="tel:+2348135335812">(+234) 813 533 5812</a>
-                  <a href="tel:+2349048536590">(+234) 904 853 6590</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
+  function step(){
+    for (var i = 0; i < bodies.length; i++){
+      var b = bodies[i];
+      if (b === drag) continue;
+      b.vy += G; b.vx *= .995;
+      b.x += b.vx; b.y += b.vy;
+    }
+    for (var k = 0; k < 4; k++){
+      for (var i = 0; i < bodies.length; i++){
+        for (var j = i + 1; j < bodies.length; j++){
+          var a = bodies[i], c = bodies[j];
+          var dx = (a.x + a.w/2) - (c.x + c.w/2), dy = (a.y + a.h/2) - (c.y + c.h/2);
+          var ox = (a.w + c.w)/2 - Math.abs(dx), oy = (a.h + c.h)/2 - Math.abs(dy);
+          if (ox <= 0 || oy <= 0) continue;
+          var sa = a === drag ? 0 : c === drag ? 1 : .5, sc = a === drag ? 1 : c === drag ? 0 : .5;
+          if (ox < oy){
+            var s = dx < 0 ? -1 : 1;
+            a.x += s*ox*sa; c.x -= s*ox*sc;
+            if ((a.vx - c.vx) * s < 0){ var t = a.vx; a.vx = c.vx*.6; c.vx = t*.6; }
+          } else {
+            var s = dy < 0 ? -1 : 1;
+            a.y += s*oy*sa; c.y -= s*oy*sc;
+            if ((a.vy - c.vy) * s < 0){ var t = a.vy; a.vy = c.vy*.25; c.vy = t*.25; }
+            a.vx *= .9; c.vx *= .9;
+          }
+        }
+      }
+      bodies.forEach(bounds);
+    }
+  }
 
-   <!-- footer -->
-   <footer class="site-footer">
-      <div class="container footer-inner">
-         <p>&copy; <script>document.write(new Date().getFullYear());</script> Henry Imoh. All rights reserved.</p>
-         <ul class="footer-social">
-            <li><a href="https://github.com/imohenry" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
-            <li><a href="https://twitter.com/i_am_imoh" aria-label="Twitter"><svg class="icon" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a></li>
-            <li><a href="https://www.linkedin.com/in/henry-imoh-5472171a1" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></li>
-         </ul>
-      </div>
-   </footer>
+  function bounds(b){
+    if (b.y + b.h > H){ b.y = H - b.h; b.vy = Math.abs(b.vy) > 2 ? -b.vy*.3 : 0; b.vx *= .85; }
+    if (b.y < top - 400) b.y = top - 400;
+    if (b.x < 0){ b.x = 0; b.vx = -b.vx*.5; }
+    if (b.x + b.w > W){ b.x = W - b.w; b.vx = -b.vx*.5; }
+  }
 
-   <button id="to-top" aria-label="Back to top">↑</button>
+  function render(){
+    bodies.forEach(function(b){
+      b.el.style.transform = 'translate(' + b.x.toFixed(1) + 'px,' + b.y.toFixed(1) + 'px) rotate(' + b.r + 'deg)';
+    });
+  }
 
-   <script src="js/modern.js"></script>
+  function loop(){
+    step(); render();
+    var moving = drag || bodies.some(function(b){ return Math.abs(b.vx) > .05 || Math.abs(b.vy) > .6; });
+    still = moving ? 0 : still + 1;
+    if (still > 90){ running = false; return; }
+    requestAnimationFrame(loop);
+  }
+  function wake(){ still = 0; if (!running){ running = true; requestAnimationFrame(loop); } }
+
+  function settleNow(){ for (var n = 0; n < 900; n++) step(); render(); }
+
+  bodies = els.map(function(el){ return { el: el, x: 0, y: 0, vx: 0, vy: 0, w: 0, h: 0, r: (Math.random()*8 - 4).toFixed(1) }; });
+
+  function start(){
+    measure(); scatter();
+    if (reduce) settleNow(); else { render(); wake(); }
+  }
+
+  /* dragging */
+  var last = null;
+  els.forEach(function(el, i){
+    el.addEventListener('pointerdown', function(e){
+      var b = bodies[i], r = stage.getBoundingClientRect();
+      drag = b; b.ox = e.clientX - r.left - b.x; b.oy = e.clientY - r.top - b.y;
+      last = { x: e.clientX, y: e.clientY, t: performance.now() };
+      el.classList.add('grab'); el.setPointerCapture(e.pointerId); el.style.zIndex = 3; wake();
+    });
+    el.addEventListener('pointermove', function(e){
+      if (drag !== bodies[i]) return;
+      var b = drag, r = stage.getBoundingClientRect();
+      var nx = e.clientX - r.left - b.ox, ny = e.clientY - r.top - b.oy;
+      b.vx = nx - b.x; b.vy = ny - b.y; b.x = nx; b.y = ny; bounds(b);
+    });
+    function release(){
+      if (drag !== bodies[i]) return;
+      var max = reduce ? 0 : 28;
+      drag.vx = Math.max(-max, Math.min(max, drag.vx));
+      drag.vy = Math.max(-max, Math.min(max, drag.vy));
+      drag = null; el.classList.remove('grab'); el.style.zIndex = ''; wake();
+    }
+    el.addEventListener('pointerup', release);
+    el.addEventListener('pointercancel', release);
+  });
+
+  document.getElementById('reset').addEventListener('click', function(){
+    scatter(); if (reduce) settleNow(); else wake();
+  });
+  addEventListener('resize', function(){ measure(); bodies.forEach(bounds); render(); wake(); });
+
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(start); else addEventListener('load', start);
+})();
+
+/* ---------- inbox ---------- */
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.msg'));
+  var count = document.getElementById('unread');
+  function open(tab, focus){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    tab.classList.remove('unread');
+    count.textContent = document.querySelectorAll('.msg.unread').length;
+    if (focus) tab.focus();
+    if (matchMedia('(max-width:820px)').matches) document.getElementById(tab.getAttribute('aria-controls')).scrollIntoView({ block: 'start' });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ open(t); });
+    t.addEventListener('keydown', function(e){
+      var n = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0;
+      if (!n) return; e.preventDefault();
+      var next = tabs[(i + n + tabs.length) % tabs.length];
+      tabs.forEach(function(x){ x.tabIndex = -1; }); next.tabIndex = 0; next.focus();
+    });
+  });
+})();
+
+/* ---------- compose chips ---------- */
+(function(){
+  var form = document.getElementById('contact-form');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var subj = document.getElementById('f-subj');
+  var topic = document.getElementById('f-topic');
+  var status = document.getElementById('form-status');
+  var statusIcon = status.querySelector('.status-icon');
+  var statusTitle = document.getElementById('status-title');
+  var statusCopy = document.getElementById('status-copy');
+  var submit = form.querySelector('[type="submit"]');
+  var sendLabel = submit.querySelector('.send-label');
+  var map = { 'A website or web app': 'Website project', 'Technical writing': 'Writing project', 'HTML emails': 'Email templates', 'Something else': 'Hello Henry' };
+
+  function showStatus(state, title, copy){
+    status.hidden = false;
+    status.dataset.state = state;
+    statusIcon.textContent = state === 'success' ? '✓' : state === 'error' ? '!' : '→';
+    statusTitle.textContent = title;
+    statusCopy.textContent = copy;
+  }
+
+  function setSending(sending){
+    form.classList.toggle('is-sending', sending);
+    form.setAttribute('aria-busy', sending ? 'true' : 'false');
+    submit.disabled = sending;
+    sendLabel.textContent = sending ? 'Sending…' : 'Send message';
+  }
+
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.setAttribute('aria-pressed', x === c); });
+      var choice = c.textContent.trim();
+      topic.value = choice;
+      subj.value = map[choice];
+    });
+  });
+
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    setSending(true);
+    showStatus('sending', 'Sending your message…', 'Keeping this window open while it travels to my inbox.');
+
+    var controller = new AbortController();
+    var timeout = setTimeout(function(){ controller.abort(); }, 15000);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString(),
+      signal: controller.signal
+    }).then(function(response){
+      clearTimeout(timeout);
+      if (!response.ok) throw new Error('Submission failed');
+      form.reset();
+      chips.forEach(function(x){ x.setAttribute('aria-pressed', 'false'); });
+      showStatus('success', 'Message sent.', 'Thanks for reaching out — I’ll reply within two working days.');
+      setSending(false);
+      sendLabel.textContent = 'Send another';
+      status.focus();
+    }).catch(function(){
+      clearTimeout(timeout);
+      showStatus('error', 'That didn’t send.', 'Your message is still here. Try again, or email Henryimoh2@gmail.com directly.');
+      setSending(false);
+      sendLabel.textContent = 'Try again';
+      status.focus();
+    });
+  });
+})();
+</script>
 </body>
 </html>
