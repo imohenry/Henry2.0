@@ -115,7 +115,7 @@
       }).then(function () {
         form.reset();
         status.dataset.state = "success";
-        status.textContent = "Thanks — your comment is waiting for Henry’s review.";
+        status.textContent = "Thanks — your comment has been received.";
         status.hidden = false;
         status.focus();
       }).catch(function (error) {
@@ -125,7 +125,7 @@
         status.focus();
       }).finally(function () {
         submit.disabled = false;
-        submit.textContent = "Send for review";
+        submit.textContent = "Send";
       });
     });
   }
