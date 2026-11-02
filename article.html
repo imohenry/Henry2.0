@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article — Henry Imoh</title>
+  <meta name="description" content="An article by Henry Imoh.">
+  <meta name="author" content="Henry Imoh">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Article by Henry Imoh">
+  <meta property="og:description" content="Notes on engineering, writing and life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script defer src="js/blog-config.js"></script>
+  <script defer src="js/blog-core.js"></script>
+  <script defer src="js/blog-article.js"></script>
+</head>
+<body>
+  <header class="blog-header" id="blog-header">
+    <nav class="blog-wrap blog-nav" aria-label="Main navigation">
+      <a class="blog-brand" href="index.html">Henry Imoh<span>.</span></a>
+      <button class="blog-nav-toggle" type="button" aria-controls="blog-nav-links" aria-expanded="false" aria-label="Open navigation"><span></span></button>
+      <ul class="blog-nav-links" id="blog-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Portfolio.html">Work</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="article-main">
+    <div class="article-shell" id="article-shell" aria-live="polite">
+      <a class="back-link" href="blog.html">← All notes</a>
+
+      <div id="article-loading">
+        <div class="loading-card"></div>
+      </div>
+
+      <article id="article" hidden>
+        <header class="article-head">
+          <p class="kicker" id="article-category"></p>
+          <h1 class="article-title" id="article-title"></h1>
+          <p class="article-dek" id="article-excerpt"></p>
+          <div class="post-meta">
+            <span id="article-date"></span>
+            <span id="article-reading-time"></span>
+            <span>By Henry Imoh</span>
+          </div>
+        </header>
+
+        <figure class="article-cover" id="article-cover" hidden>
+          <img id="article-image" src="" alt="">
+        </figure>
+
+        <div class="article-layout">
+          <div>
+            <div class="article-body" id="article-body"></div>
+            <div class="external-article" id="external-article" hidden>
+              <p>This piece first appeared on Medium. I’m keeping it in the archive while new writing moves here.</p>
+              <a class="pill-button" id="external-link" href="#" target="_blank" rel="noopener noreferrer">Read the original ↗</a>
+            </div>
+          </div>
+          <aside class="article-actions" id="article-actions" aria-label="Article actions" hidden>
+            <button class="action-button" id="like-button" type="button" aria-pressed="false"><span aria-hidden="true">♥</span> <span id="like-label">Like</span> <span id="like-count">0</span></button>
+            <button class="action-button" id="share-button" type="button"><span aria-hidden="true">↗</span> <span id="share-label">Share</span></button>
+            <small id="action-note">Likes are saved without an account.</small>
+          </aside>
+        </div>
+
+        <section class="comments" id="comments" aria-labelledby="comments-title" hidden>
+          <h2 id="comments-title">Join the conversation.</h2>
+          <p class="comments-intro">Comments are reviewed before they appear. Be thoughtful; disagreement is welcome, cruelty is not.</p>
+
+          <form class="comment-form" id="comment-form">
+            <label>
+              Your name
+              <input name="name" maxlength="80" autocomplete="name" required>
+            </label>
+            <label>
+              Your comment
+              <textarea name="body" maxlength="2500" required placeholder="Add something useful to the conversation…"></textarea>
+            </label>
+            <label class="sr-only" aria-hidden="true">Company <input name="company" tabindex="-1" autocomplete="off"></label>
+            <p class="form-status" id="comment-status" role="status" tabindex="-1" hidden></p>
+            <div class="form-row">
+              <small>Up to 2,500 characters.</small>
+              <button class="form-submit" type="submit">Send for review</button>
+            </div>
+          </form>
+
+          <ol class="comment-list" id="comment-list"></ol>
+          <p class="no-comments" id="no-comments">No approved comments yet. You can be the first.</p>
+        </section>
+      </article>
+
+      <section class="article-error" id="article-error" hidden>
+        <h1>This note wandered off.</h1>
+        <p id="article-error-copy">It may have moved, or the blog may be having a quiet moment.</p>
+        <a class="pill-button" href="blog.html">Back to the blog</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="blog-footer">
+    <div class="blog-wrap blog-footer-inner">
+      <span>© <span id="blog-year"></span> Henry Imoh</span>
+      <nav aria-label="Social links">
+        <a href="https://github.com/imohenry">GitHub</a>
+        <a href="https://twitter.com/i_am_imoh">X</a>
+        <a href="https://www.linkedin.com/in/henry-imoh-5472171a1">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
