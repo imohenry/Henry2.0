@@ -1,0 +1,25 @@
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/admin.html"
+  [headers.values]
+    Cache-Control = "no-store"
+    Content-Security-Policy = "default-src 'self'; connect-src 'self'; img-src 'self' https: data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+
+[[redirects]]
+  from = "/api/blog"
+  to = "/.netlify/functions/blog"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/blog-admin"
+  to = "/.netlify/functions/blog-admin"
+  status = 200
+  force = true

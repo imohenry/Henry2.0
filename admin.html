@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' https: data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+  <title>Blog desk — Henry Imoh</title>
+  <meta name="description" content="Private publishing desk for Henry Imoh's blog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/blog-admin.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script defer src="js/blog-config.js"></script>
+  <script defer src="js/blog-core.js"></script>
+  <script defer src="js/blog-admin.js"></script>
+</head>
+<body>
+  <main class="login-view" id="login-view" aria-labelledby="login-title">
+    <section class="login-card">
+      <a class="admin-brand" href="blog.html">Henry Imoh<span>.</span></a>
+      <p class="admin-kicker">Private writing desk</p>
+      <h1 id="login-title">Let’s make something worth reading.</h1>
+      <p>Sign in to write, publish, and moderate the conversation.</p>
+      <form id="login-form" class="login-form">
+        <label for="admin-password">Admin password</label>
+        <div class="password-row">
+          <input id="admin-password" name="password" type="password" minlength="12" autocomplete="current-password" required>
+          <button class="primary-button" type="submit">Open the desk</button>
+        </div>
+        <p class="inline-status" id="login-status" role="status" hidden></p>
+      </form>
+      <a class="quiet-link" href="blog.html">← Back to the public blog</a>
+    </section>
+    <div class="login-art" aria-hidden="true">
+      <span>Draft</span><span>Edit</span><span>Publish</span>
+    </div>
+  </main>
+
+  <div class="admin-app" id="admin-app" hidden>
+    <header class="admin-header">
+      <a class="admin-brand" href="blog.html">Henry Imoh<span>.</span> <small>Blog desk</small></a>
+      <nav class="admin-tabs" aria-label="Admin sections">
+        <button class="admin-tab active" type="button" data-view="posts" aria-pressed="true">Posts</button>
+        <button class="admin-tab" type="button" data-view="comments" aria-pressed="false">Comments <span class="count-badge" id="pending-count">0</span></button>
+      </nav>
+      <div class="admin-account">
+        <a href="blog.html" target="_blank" rel="noopener">View blog ↗</a>
+        <button id="logout-button" type="button">Log out</button>
+      </div>
+    </header>
+
+    <section class="admin-view posts-view" id="posts-view">
+      <aside class="post-rail">
+        <div class="rail-heading">
+          <div><span>Your library</span><strong id="post-total">0 posts</strong></div>
+          <button class="new-post-button" id="new-post-button" type="button">+ New</button>
+        </div>
+        <label class="rail-search">
+          <span class="sr-only">Search posts</span>
+          <input id="admin-post-search" type="search" placeholder="Search posts">
+        </label>
+        <div class="post-list" id="admin-post-list" role="list"></div>
+      </aside>
+
+      <section class="editor-shell" id="editor-shell">
+        <form id="post-form" class="post-form">
+          <div class="editor-topline">
+            <div>
+              <span class="status-dot" id="editor-status-dot"></span>
+              <strong id="editor-status-label">New draft</strong>
+              <span class="save-note" id="save-note">Not saved yet</span>
+            </div>
+            <label class="featured-toggle"><input id="post-featured" name="featured" type="checkbox"> <span>Feature this post</span></label>
+          </div>
+
+          <div class="editor-columns">
+            <div class="editor-fields">
+              <label class="title-field">
+                <span>Title</span>
+                <textarea id="post-title" name="title" rows="2" maxlength="180" placeholder="Give the idea a sharp title" required></textarea>
+              </label>
+
+              <div class="field-grid two">
+                <label><span>Slug</span><input id="post-slug" name="slug" maxlength="120" placeholder="a-clean-url-slug" required></label>
+                <label><span>Category</span><input id="post-category" name="category" maxlength="80" placeholder="Engineering"></label>
+              </div>
+
+              <label>
+                <span>Excerpt <small id="excerpt-count">0/500</small></span>
+                <textarea id="post-excerpt" name="excerpt" rows="3" maxlength="500" placeholder="Two sentences that make the reader curious" required></textarea>
+              </label>
+
+              <div class="field-grid three">
+                <label><span>Publish date</span><input id="post-date" name="publishedAt" type="date" required></label>
+                <label><span>Read time</span><div class="input-suffix"><input id="post-reading-time" name="readingTime" type="number" min="1" max="120" value="1" required><i>min</i></div></label>
+                <label><span>Current state</span><output id="post-state-output">Draft</output></label>
+              </div>
+
+              <label><span>Cover image URL</span><input id="post-cover" name="coverImage" type="url" placeholder="https://images.example.com/cover.jpg"></label>
+              <label><span>External article URL <small>optional</small></span><input id="post-external" name="externalUrl" type="url" placeholder="https://medium.com/... leaving this blank creates a native post"></label>
+
+              <div class="content-field">
+                <div class="content-label"><label for="post-content">Article</label><span id="word-count">0 words</span></div>
+                <div class="markdown-toolbar" role="toolbar" aria-label="Markdown formatting">
+                  <button type="button" data-format="heading" title="Heading">H2</button>
+                  <button type="button" data-format="bold" title="Bold"><strong>B</strong></button>
+                  <button type="button" data-format="italic" title="Italic"><em>I</em></button>
+                  <button type="button" data-format="link" title="Link">Link</button>
+                  <button type="button" data-format="quote" title="Quote">“”</button>
+                  <button type="button" data-format="list" title="Bulleted list">List</button>
+                  <button type="button" data-format="code" title="Code block">Code</button>
+                </div>
+                <textarea id="post-content" name="content" rows="22" maxlength="100000" spellcheck="true" placeholder="Write in Markdown…"></textarea>
+              </div>
+            </div>
+
+            <aside class="preview-panel" aria-labelledby="preview-heading">
+              <div class="preview-heading"><span id="preview-heading">Live preview</span><small>Safe Markdown</small></div>
+              <article class="preview-card">
+                <img id="preview-cover" src="" alt="" hidden>
+                <p class="preview-category" id="preview-category">Notes</p>
+                <h2 id="preview-title">Your title will live here.</h2>
+                <p class="preview-excerpt" id="preview-excerpt">The excerpt sets up the story before the reader begins.</p>
+                <div class="preview-meta"><span id="preview-date"></span><span id="preview-time">1 min read</span></div>
+                <div class="preview-body" id="preview-body"><p>Start writing to see the article take shape.</p></div>
+                <div class="preview-external" id="preview-external" hidden>This archive entry will send readers to the external article.</div>
+              </article>
+            </aside>
+          </div>
+
+          <footer class="editor-actions">
+            <button class="danger-button" id="delete-post-button" type="button" hidden>Delete post</button>
+            <div>
+              <button class="secondary-button" id="save-draft-button" type="button">Save draft</button>
+              <button class="primary-button" id="publish-button" type="button">Publish post</button>
+            </div>
+          </footer>
+        </form>
+      </section>
+    </section>
+
+    <section class="admin-view comments-view" id="comments-view" hidden>
+      <div class="comments-head">
+        <div><p class="admin-kicker">Moderation queue</p><h1>Keep the conversation useful.</h1></div>
+        <div class="comment-filters" role="group" aria-label="Filter comments">
+          <button type="button" data-comment-filter="pending" aria-pressed="true">Pending</button>
+          <button type="button" data-comment-filter="approved" aria-pressed="false">Approved</button>
+          <button type="button" data-comment-filter="rejected" aria-pressed="false">Rejected</button>
+          <button type="button" data-comment-filter="all" aria-pressed="false">All</button>
+        </div>
+      </div>
+      <div class="moderation-list" id="moderation-list"></div>
+      <p class="comments-empty" id="comments-empty" hidden>Nothing in this queue. A rare and beautiful kind of quiet.</p>
+    </section>
+  </div>
+
+  <dialog class="delete-dialog" id="delete-dialog" aria-labelledby="delete-title">
+    <form method="dialog">
+      <span class="dialog-mark" aria-hidden="true">!</span>
+      <h2 id="delete-title">Delete this post?</h2>
+      <p>The post, its comments, and its likes will be removed from the Sheet. Google Sheet version history is the recovery path.</p>
+      <div><button class="secondary-button" value="cancel">Keep it</button><button class="danger-button" id="confirm-delete-button" value="delete">Delete permanently</button></div>
+    </form>
+  </dialog>
+
+  <p class="admin-toast" id="admin-toast" role="status" aria-live="polite" hidden></p>
+</body>
+</html>
