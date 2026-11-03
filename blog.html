@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notes by Henry Imoh — Engineering, writing and life</title>
+  <meta name="description" content="Long-form notes from Henry Imoh about building for the web, explaining technology, and figuring out the rest.">
+  <meta name="author" content="Henry Imoh">
+  <meta property="og:title" content="Notes by Henry Imoh">
+  <meta property="og:description" content="Things I learned the long way — on engineering, writing and life.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script defer src="js/blog-config.js"></script>
+  <script defer src="js/blog-core.js"></script>
+  <script defer src="js/blog-index.js"></script>
+</head>
+<body>
+  <header class="blog-header" id="blog-header">
+    <nav class="blog-wrap blog-nav" aria-label="Main navigation">
+      <a class="blog-brand" href="index.html">Henry Imoh<span>.</span></a>
+      <button class="blog-nav-toggle" type="button" aria-controls="blog-nav-links" aria-expanded="false" aria-label="Open navigation"><span></span></button>
+      <ul class="blog-nav-links" id="blog-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Portfolio.html">Work</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="blog-wrap blog-hero-inner">
+        <div class="blog-hero-copy">
+          <p class="kicker">Henry’s field notes</p>
+          <h1>Things I learned the <span>long way.</span></h1>
+          <p>Notes on building for the web, explaining technology in plain English, and figuring out the rest as I go.</p>
+        </div>
+        <div class="hero-doodles" aria-hidden="true">
+          <span class="hero-orbit"></span>
+          <span class="hero-note">Code</span>
+          <span class="hero-note">Words</span>
+          <span class="hero-note">Life, too</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="posts-section" aria-labelledby="latest-heading">
+      <div class="blog-wrap">
+        <div class="section-heading">
+          <h2 id="latest-heading">Start here.</h2>
+          <p>New essays live here. Older pieces from Medium stay in the archive, because good ideas deserve a permanent address.</p>
+        </div>
+
+        <div class="featured-post" id="featured-post" aria-live="polite">
+          <div class="loading-card"></div>
+        </div>
+
+        <div class="post-tools" id="post-tools" hidden>
+          <div class="topic-filters" id="topic-filters" aria-label="Filter posts by topic"></div>
+          <label class="post-search">
+            <span class="sr-only">Search posts</span>
+            <input id="post-search" type="search" placeholder="Search the notes" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="posts-grid" id="posts-grid" aria-live="polite">
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>No notes match that search yet. Try another topic or a shorter phrase.</p>
+      </div>
+    </section>
+
+    <section class="blog-cta">
+      <div class="blog-wrap">
+        <div class="blog-cta-inner">
+          <div>
+            <h2>Have a hard problem worth writing about?</h2>
+            <p>I build useful interfaces and turn complicated ideas into clear stories. Tell me what you are working on.</p>
+          </div>
+          <a class="pill-button" href="index.html#contact">Write me a note →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="blog-footer">
+    <div class="blog-wrap blog-footer-inner">
+      <span>© <span id="blog-year"></span> Henry Imoh</span>
+      <nav aria-label="Social links">
+        <a href="https://github.com/imohenry">GitHub</a>
+        <a href="https://twitter.com/i_am_imoh">X</a>
+        <a href="https://www.linkedin.com/in/henry-imoh-5472171a1">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
